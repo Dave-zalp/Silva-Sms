@@ -1,3 +1,10 @@
+# Required repository secrets:
+#   SILVASMS_SSH_USER            - SSH/SFTP username on the host
+#   SILVASMS_SSH_HOST            - SSH/SFTP host
+#   SILVASMS_SSH_PORT            - SSH/SFTP port
+#   SILVASMS_SSH_KEY             - SSH private key
+#   SILVASMS_DEPLOY_PATH         - remote path for the Laravel backend
+#   SILVASMS_FRONTEND_DEPLOY_PATH - remote path for the built frontend (dist/)
 name: 🚀 Deploy SILVASMS to Hostinger via SSH
 
 on:
