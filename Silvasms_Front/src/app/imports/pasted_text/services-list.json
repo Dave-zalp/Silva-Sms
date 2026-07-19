@@ -1,0 +1,505 @@
+{
+    "success": true,
+    "message": "Services fetched successfully",
+    "total": 281,
+    "data": [
+        {
+            "id": 230,
+            "code": "zoosk",
+            "title": "zoosk"
+        },
+        {
+            "id": 110,
+            "code": "wild",
+            "title": "Wild App"
+        },
+        {
+            "id": 231,
+            "code": "betfair",
+            "title": "Betfair"
+        },
+        {
+            "id": 111,
+            "code": "okcupid",
+            "title": "OkCupid"
+        },
+        {
+            "id": 232,
+            "code": "aarp",
+            "title": "AARP"
+        },
+        {
+            "id": 112,
+            "code": "wish",
+            "title": "Wish"
+        },
+        {
+            "id": 233,
+            "code": "groupme",
+            "title": "groupme"
+        },
+        {
+            "id": 113,
+            "code": "tamtam",
+            "title": "TamTam"
+        },
+        {
+            "id": 234,
+            "code": "go2bank",
+            "title": "GO2bank"
+        },
+        {
+            "id": 235,
+            "code": "appen",
+            "title": "Appen"
+        },
+        {
+            "id": 115,
+            "code": "snapchat",
+            "title": "Snapchat"
+        },
+        {
+            "id": 236,
+            "code": "superbet",
+            "title": "Superbet"
+        },
+        {
+            "id": 116,
+            "code": "goalry",
+            "title": "Goalry"
+        },
+        {
+            "id": 237,
+            "code": "wise",
+            "title": "wise"
+        },
+        {
+            "id": 117,
+            "code": "fiverr",
+            "title": "Fiverr"
+        },
+        {
+            "id": 238,
+            "code": "tixcraft",
+            "title": "Tixcraft"
+        },
+        {
+            "id": 118,
+            "code": "depop",
+            "title": "Depop"
+        },
+        {
+            "id": 239,
+            "code": "xianyu",
+            "title": "Xianyu \/ \u95f2\u9c7c"
+        },
+        {
+            "id": 10,
+            "code": "hinge",
+            "title": "Hinge"
+        },
+        {
+            "id": 11,
+            "code": "microsoft",
+            "title": "Microsoft"
+        },
+        {
+            "id": 13,
+            "code": "ub",
+            "title": "Uber"
+        },
+        {
+            "id": 17,
+            "code": "yahoo",
+            "title": "Yahoo"
+        },
+        {
+            "id": 19,
+            "code": "coinbase",
+            "title": "Coinbase"
+        },
+        {
+            "id": 240,
+            "code": "eneba",
+            "title": "Eneba"
+        },
+        {
+            "id": 120,
+            "code": "skrill",
+            "title": "Skrill"
+        },
+        {
+            "id": 241,
+            "code": "ininal",
+            "title": "Ininal"
+        },
+        {
+            "id": 1,
+            "code": "tg",
+            "title": "Telegram"
+        },
+        {
+            "id": 122,
+            "code": "oldubil",
+            "title": "OlduBil"
+        },
+        {
+            "id": 243,
+            "code": "paypay",
+            "title": "PayPay \/ \u30da\u30a4\u30da\u30a4"
+        },
+        {
+            "id": 2,
+            "code": "pp",
+            "title": "Paypal"
+        },
+        {
+            "id": 244,
+            "code": "taito",
+            "title": "Taito"
+        },
+        {
+            "id": 3,
+            "code": "tk",
+            "title": "TikTok\/Douyin"
+        },
+        {
+            "id": 124,
+            "code": "weverse",
+            "title": "WeverseShop"
+        },
+        {
+            "id": 245,
+            "code": "vandlecard",
+            "title": "VANDLE CARD \/ \u30d0\u30f3\u30c9\u30eb\u30ab\u30fc\u30c9"
+        },
+        {
+            "id": 4,
+            "code": "af",
+            "title": "Affirm"
+        },
+        {
+            "id": 125,
+            "code": "wallapop",
+            "title": "Wallapop"
+        },
+        {
+            "id": 246,
+            "code": "paidy",
+            "title": "Paidy"
+        },
+        {
+            "id": 5,
+            "code": "wa",
+            "title": "WhatsApp"
+        },
+        {
+            "id": 126,
+            "code": "ozon",
+            "title": "Ozon"
+        },
+        {
+            "id": 247,
+            "code": "kyash",
+            "title": "Kyash"
+        },
+        {
+            "id": 6,
+            "code": "vb",
+            "title": "Viber"
+        },
+        {
+            "id": 127,
+            "code": "tmaster",
+            "title": "Ticketmaster"
+        },
+        {
+            "id": 248,
+            "code": "naka",
+            "title": "NAKA Pay"
+        },
+        {
+            "id": 7,
+            "code": "kakao",
+            "title": "KakaoTalk"
+        },
+        {
+            "id": 128,
+            "code": "luxy",
+            "title": "Luxy"
+        },
+        {
+            "id": 249,
+            "code": "qoo10",
+            "title": "Qoo10"
+        },
+        {
+            "id": 8,
+            "code": "google",
+            "title": "Google, Youtube, Gmail"
+        },
+        {
+            "id": 129,
+            "code": "etsy",
+            "title": "Etsy"
+        },
+        {
+            "id": 9,
+            "code": "bz",
+            "title": "Blizzard \/ Battle"
+        },
+        {
+            "id": 20,
+            "code": "vinted",
+            "title": "Vinted"
+        },
+        {
+            "id": 21,
+            "code": "ebay",
+            "title": "eBay"
+        },
+        {
+            "id": 22,
+            "code": "geegee",
+            "title": "GeeGee"
+        },
+        {
+            "id": 23,
+            "code": "red",
+            "title": "REDnote \/ \u5c0f\u7ea2\u4e66"
+        },
+        {
+            "id": 26,
+            "code": "omiai",
+            "title": "Omiai"
+        },
+        {
+            "id": 27,
+            "code": "getemail",
+            "title": "GetEmail"
+        },
+        {
+            "id": 28,
+            "code": "wondercise",
+            "title": "Wondercise"
+        },
+        {
+            "id": 29,
+            "code": "asiamiles",
+            "title": "Asia Miles"
+        },
+        {
+            "id": 250,
+            "code": "bovada",
+            "title": "Bovada"
+        },
+        {
+            "id": 251,
+            "code": "povo",
+            "title": "povo"
+        },
+        {
+            "id": 131,
+            "code": "claude",
+            "title": "Claude"
+        },
+        {
+            "id": 252,
+            "code": "8casino",
+            "title": "888 Casino"
+        },
+        {
+            "id": 132,
+            "code": "winzo",
+            "title": "WinZO"
+        },
+        {
+            "id": 253,
+            "code": "paysafe",
+            "title": "PaysafeCard"
+        },
+        {
+            "id": 133,
+            "code": "grindr",
+            "title": "Grindr"
+        },
+        {
+            "id": 254,
+            "code": "piccoma",
+            "title": "Piccoma \/ \u30d4\u30c3\u30b3\u30de"
+        },
+        {
+            "id": 134,
+            "code": "botim",
+            "title": "Botim"
+        },
+        {
+            "id": 255,
+            "code": "greggs",
+            "title": "Greggs"
+        },
+        {
+            "id": 135,
+            "code": "mchat",
+            "title": "MChat"
+        },
+        {
+            "id": 256,
+            "code": "twitch",
+            "title": "twitch"
+        },
+        {
+            "id": 136,
+            "code": "sk",
+            "title": "Skype"
+        },
+        {
+            "id": 257,
+            "code": "oneforma",
+            "title": "oneforma"
+        },
+        {
+            "id": 137,
+            "code": "offerup",
+            "title": "OfferUp"
+        },
+        {
+            "id": 258,
+            "code": "rebtel ",
+            "title": "Rebtel "
+        },
+        {
+            "id": 138,
+            "code": "zepto",
+            "title": "Zepto"
+        },
+        {
+            "id": 259,
+            "code": "subito",
+            "title": "Subito"
+        },
+        {
+            "id": 139,
+            "code": "cleartrip",
+            "title": "Cleartrip"
+        },
+        {
+            "id": 31,
+            "code": "nc",
+            "title": "NCSOFT"
+        },
+        {
+            "id": 34,
+            "code": "aol",
+            "title": "AOL"
+        },
+        {
+            "id": 35,
+            "code": "rocketreach",
+            "title": "RocketReach"
+        },
+        {
+            "id": 36,
+            "code": "azure",
+            "title": "Azure"
+        },
+        {
+            "id": 37,
+            "code": "curtsy",
+            "title": "Curtsy"
+        },
+        {
+            "id": 38,
+            "code": "taptap",
+            "title": "TapTap"
+        },
+        {
+            "id": 39,
+            "code": "gamehub",
+            "title": "GameHub"
+        },
+        {
+            "id": 140,
+            "code": "unacademy",
+            "title": "Unacademy"
+        },
+        {
+            "id": 261,
+            "code": "dseek",
+            "title": "DeepSeek"
+        },
+        {
+            "id": 141,
+            "code": "paddypower",
+            "title": "Paddypower"
+        },
+        {
+            "id": 262,
+            "code": "tdyol",
+            "title": "Trendyol"
+        },
+        {
+            "id": 142,
+            "code": "sportsbuzz",
+            "title": "Sportsbuzz"
+        },
+        {
+            "id": 263,
+            "code": "siliflow",
+            "title": "SiliconFlow \/ \u7845\u57fa\u6d41\u52a8"
+        },
+        {
+            "id": 143,
+            "code": "linode",
+            "title": "Linode"
+        },
+        {
+            "id": 264,
+            "code": "scruff",
+            "title": "Scruff"
+        },
+        {
+            "id": 144,
+            "code": "redbubble",
+            "title": "Redbubble"
+        },
+        {
+            "id": 265,
+            "code": "betano",
+            "title": "Betano"
+        },
+        {
+            "id": 145,
+            "code": "careem",
+            "title": "Careem"
+        },
+        {
+            "id": 266,
+            "code": "lemfi",
+            "title": "Lemfi"
+        },
+        {
+            "id": 146,
+            "code": "foodora",
+            "title": "Foodora"
+        },
+        {
+            "id": 267,
+            "code": "dream11",
+            "title": "Dream11"
+        },
+        {
+            "id": 147,
+            "code": "signal",
+            "title": "Signal"
+        },
+        {
+            "id": 268,
+            "code": "warpcast",
+            "title": "Warpcast"
+        },
+        {
+            "id": 148,
+            "code": "walmart",
+            "title": "Walmart"
+        },
