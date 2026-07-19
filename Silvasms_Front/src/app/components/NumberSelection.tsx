@@ -70,7 +70,7 @@ export default function NumberSelection({ country, onBack, onSelectNumber }: Num
               <BreadcrumbItem>
                 <BreadcrumbLink 
                   onClick={onBack} 
-                  className="cursor-pointer flex items-center gap-1 text-[#2563EB] hover:text-[#1d4ed8]"
+                  className="cursor-pointer flex items-center gap-1 text-[#0EA968] hover:text-[#0B8055]"
                 >
                   <ChevronLeft className="w-4 h-4" />
                   Countries
@@ -91,7 +91,7 @@ export default function NumberSelection({ country, onBack, onSelectNumber }: Num
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
           <div>
             <h1 className="mb-2 text-black">Select Number</h1>
-            <p className="text-[#6B7280]">{country.available} numbers available</p>
+            <p className="text-[#6B7A72]">{country.available} numbers available</p>
           </div>
 
           {/* Service Filter */}
@@ -161,7 +161,7 @@ export default function NumberSelection({ country, onBack, onSelectNumber }: Num
 
         {filteredNumbers.length === 0 && (
           <div className="text-center py-12 bg-white rounded-lg border border-gray-200">
-            <p className="text-[#6B7280]">No numbers available for this service.</p>
+            <p className="text-[#6B7A72]">No numbers available for this service.</p>
           </div>
         )}
       </div>

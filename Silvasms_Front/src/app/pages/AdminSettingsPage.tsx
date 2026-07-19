@@ -225,7 +225,7 @@ export default function AdminSettingsPage() {
         <h2 className="text-lg text-black dark:text-white mb-3">Server Management</h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
           {/* Server 1 (SMSBus) Toggle */}
-          <Card className={`border border-gray-200 dark:border-gray-800 ${smsBusEnabled ? 'bg-white dark:bg-[#1E2A45]' : 'bg-gray-100 dark:bg-gray-900'}`}>
+          <Card className={`border border-gray-200 dark:border-gray-800 ${smsBusEnabled ? 'bg-white dark:bg-[#1B241D]' : 'bg-gray-100 dark:bg-gray-900'}`}>
             <CardHeader className="border-b border-gray-200 dark:border-gray-800">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
@@ -281,7 +281,7 @@ export default function AdminSettingsPage() {
           </Card>
 
           {/* Server 2 (HeroSMS) Toggle */}
-          <Card className={`border border-gray-200 dark:border-gray-800 ${heroSmsEnabled ? 'bg-white dark:bg-[#1E2A45]' : 'bg-gray-100 dark:bg-gray-900'}`}>
+          <Card className={`border border-gray-200 dark:border-gray-800 ${heroSmsEnabled ? 'bg-white dark:bg-[#1B241D]' : 'bg-gray-100 dark:bg-gray-900'}`}>
             <CardHeader className="border-b border-gray-200 dark:border-gray-800">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">

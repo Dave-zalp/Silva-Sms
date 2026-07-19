@@ -113,32 +113,42 @@ export default function Sidebar({ onLogout, isMobile = false, onNavigate }: Side
 
   return (
     <div className={cn(
-      "w-60 h-screen flex flex-col bg-[#0F1729]",
-      isMobile ? "border-0" : "border-r border-[#1E2A45] shadow-sm"
+      "w-60 h-screen flex flex-col bg-[#111713]",
+      isMobile ? "border-0" : "border-r border-[#1B241D] shadow-sm"
     )}>
       {/* Logo - Only on Desktop */}
       {!isMobile && (
-        <div className="p-6 border-b border-[#1E2A45] bg-[#0F1729]">
-          <div className="flex items-center gap-1">
-            <span className="text-xl font-bold text-[#F1F5F9]">Golden</span>
-            <span className="text-xl font-bold text-[#3B82F6]">SMS</span>
+        <div className="p-6 border-b border-[#1B241D] bg-[#111713]">
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 rounded-md bg-[#16C784]/10 border border-[#16C784]/30 flex items-center justify-center flex-shrink-0">
+              <span className="signal-dot w-1.5 h-1.5 rounded-full bg-[#16C784]" />
+            </div>
+            <span className="text-lg tracking-tight" style={{ fontFamily: 'var(--font-display)' }}>
+              <span className="font-semibold text-[#EAF2ED]">Silva</span>
+              <span className="font-semibold text-[#16C784]">-Sms</span>
+            </span>
           </div>
         </div>
       )}
 
       {/* Mobile Header */}
       {isMobile && (
-        <div className="p-6 border-b border-[#1E2A45] bg-[#0F1729]">
-          <div className="flex items-center gap-1">
-            <span className="text-xl font-bold text-[#F1F5F9]">Golden</span>
-            <span className="text-xl font-bold text-[#3B82F6]">SMS</span>
+        <div className="p-6 border-b border-[#1B241D] bg-[#111713]">
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 rounded-md bg-[#16C784]/10 border border-[#16C784]/30 flex items-center justify-center flex-shrink-0">
+              <span className="signal-dot w-1.5 h-1.5 rounded-full bg-[#16C784]" />
+            </div>
+            <span className="text-lg tracking-tight" style={{ fontFamily: 'var(--font-display)' }}>
+              <span className="font-semibold text-[#EAF2ED]">Silva</span>
+              <span className="font-semibold text-[#16C784]">-Sms</span>
+            </span>
           </div>
         </div>
       )}
 
       {/* Navigation */}
       <div className={cn(
-        "flex-1 overflow-y-auto bg-[#0F1729]",
+        "flex-1 overflow-y-auto bg-[#111713]",
         isMobile ? "py-4 px-3" : "py-5 px-3"
       )}>
         {/* Main Menu */}
@@ -156,8 +166,8 @@ export default function Sidebar({ onLogout, isMobile = false, onNavigate }: Side
                 className={cn(
                   "w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left transition-all text-sm h-11",
                   active && !item.isExternal
-                    ? "bg-[#1E2A45] text-[#3B82F6] border-l-[3px] border-[#3B82F6]"
-                    : "text-[#94A3B8] hover:bg-[#1A2540] hover:text-[#F1F5F9]"
+                    ? "bg-[#1B241D] text-[#16C784] border-l-[3px] border-[#16C784]"
+                    : "text-[#8CA398] hover:bg-[#16201A] hover:text-[#EAF2ED]"
                 )}
               >
                 <Icon className="w-4 h-4 flex-shrink-0" />
@@ -170,7 +180,7 @@ export default function Sidebar({ onLogout, isMobile = false, onNavigate }: Side
         {/* Server 1 Section - Only show if SMSBus is active */}
         {activeProvider === 'smsbus' && (
           <div className="mt-6">
-            <h3 className="px-3 mb-2 text-[11px] tracking-[0.08em] text-[#64748B] uppercase font-semibold">
+            <h3 className="px-3 mb-2 text-[11px] tracking-[0.08em] text-[#6B8378] uppercase font-semibold">
               SERVER 1
             </h3>
             <nav className="space-y-0.5">
@@ -185,8 +195,8 @@ export default function Sidebar({ onLogout, isMobile = false, onNavigate }: Side
                     className={cn(
                       "w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left transition-all text-sm h-11",
                       active
-                        ? "bg-[#1E2A45] text-[#3B82F6] border-l-[3px] border-[#3B82F6]"
-                        : "text-[#94A3B8] hover:bg-[#1A2540] hover:text-[#F1F5F9]"
+                        ? "bg-[#1B241D] text-[#16C784] border-l-[3px] border-[#16C784]"
+                        : "text-[#8CA398] hover:bg-[#16201A] hover:text-[#EAF2ED]"
                     )}
                   >
                     <Icon className="w-4 h-4 flex-shrink-0" />
@@ -201,7 +211,7 @@ export default function Sidebar({ onLogout, isMobile = false, onNavigate }: Side
         {/* Server 2 Section - Only show if HeroSMS is active */}
         {activeProvider === 'herosms' && (
           <div className="mt-6">
-            <h3 className="px-3 mb-2 text-[11px] tracking-[0.08em] text-[#64748B] uppercase font-semibold">
+            <h3 className="px-3 mb-2 text-[11px] tracking-[0.08em] text-[#6B8378] uppercase font-semibold">
               SERVER 2
             </h3>
             <nav className="space-y-0.5">
@@ -216,8 +226,8 @@ export default function Sidebar({ onLogout, isMobile = false, onNavigate }: Side
                     className={cn(
                       "w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left transition-all text-sm h-11",
                       active
-                        ? "bg-[#1E2A45] text-[#3B82F6] border-l-[3px] border-[#3B82F6]"
-                        : "text-[#94A3B8] hover:bg-[#1A2540] hover:text-[#F1F5F9]"
+                        ? "bg-[#1B241D] text-[#16C784] border-l-[3px] border-[#16C784]"
+                        : "text-[#8CA398] hover:bg-[#16201A] hover:text-[#EAF2ED]"
                     )}
                   >
                     <Icon className="w-4 h-4 flex-shrink-0" />
@@ -231,7 +241,7 @@ export default function Sidebar({ onLogout, isMobile = false, onNavigate }: Side
 
         {/* History Section */}
         <div className="mt-6">
-          <h3 className="px-3 mb-2 text-[11px] tracking-[0.08em] text-[#64748B] uppercase font-semibold">
+          <h3 className="px-3 mb-2 text-[11px] tracking-[0.08em] text-[#6B8378] uppercase font-semibold">
             HISTORY
           </h3>
           <nav className="space-y-0.5">
@@ -246,8 +256,8 @@ export default function Sidebar({ onLogout, isMobile = false, onNavigate }: Side
                   className={cn(
                     "w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left transition-all text-sm h-11",
                     active
-                      ? "bg-[#1E2A45] text-[#3B82F6] border-l-[3px] border-[#3B82F6]"
-                      : "text-[#94A3B8] hover:bg-[#1A2540] hover:text-[#F1F5F9]"
+                      ? "bg-[#1B241D] text-[#16C784] border-l-[3px] border-[#16C784]"
+                      : "text-[#8CA398] hover:bg-[#16201A] hover:text-[#EAF2ED]"
                   )}
                 >
                   <Icon className="w-4 h-4 flex-shrink-0" />
@@ -262,12 +272,12 @@ export default function Sidebar({ onLogout, isMobile = false, onNavigate }: Side
       {/* Admin Panel Quick Link - Only for Admins */}
       {user?.role === 'admin' && (
         <div className={cn(
-          "border-t border-[#1E2A45] bg-[#0F1729]",
+          "border-t border-[#1B241D] bg-[#111713]",
           isMobile ? "p-3" : "p-3"
         )}>
           <button
             onClick={() => handleNavClick('/admin')}
-            className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left bg-[#1E2A45] text-[#3B82F6] hover:bg-[#1A2540] transition-all text-sm border border-[#3B82F6]/20"
+            className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left bg-[#1B241D] text-[#16C784] hover:bg-[#16201A] transition-all text-sm border border-[#16C784]/20"
           >
             <Shield className="w-4 h-4 flex-shrink-0" />
             <span>Admin Panel</span>
@@ -277,12 +287,12 @@ export default function Sidebar({ onLogout, isMobile = false, onNavigate }: Side
 
       {/* Logout Section */}
       <div className={cn(
-        "border-t border-[#1E2A45] bg-[#0F1729]",
+        "border-t border-[#1B241D] bg-[#111713]",
         isMobile ? "p-3" : "p-3"
       )}>
         <button
           onClick={handleLogoutClick}
-          className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-[#64748B] hover:text-[#EF4444] hover:bg-[#1A2540] transition-all text-sm"
+          className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-[#6B8378] hover:text-[#EF4444] hover:bg-[#16201A] transition-all text-sm"
         >
           <LogOut className="w-4 h-4 flex-shrink-0 text-[#EF4444]" />
           <span>Logout</span>

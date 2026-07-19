@@ -86,7 +86,7 @@ export default function TransactionHistoryPage() {
       );
     } else if (normalizedType.includes('purchase') || normalizedType.includes('debit')) {
       return (
-        <Badge className="bg-[#3B82F6]/10 dark:bg-blue-950/20 text-[#3B82F6] dark:text-blue-400 hover:bg-[#3B82F6]/10 dark:hover:bg-blue-950/20">
+        <Badge className="bg-[#16C784]/10 dark:bg-blue-950/20 text-[#16C784] dark:text-blue-400 hover:bg-[#16C784]/10 dark:hover:bg-blue-950/20">
           Purchase
         </Badge>
       );
@@ -153,10 +153,10 @@ export default function TransactionHistoryPage() {
     .reduce((sum, tx) => sum + parseFloat(tx.amount || '0'), 0);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#0A0F1E] via-[#0F1729] to-[#1E2A45] p-3 sm:p-4 md:p-6 lg:p-8">
+    <div className="min-h-screen bg-gradient-to-br from-[#0A0D0B] via-[#111713] to-[#1B241D] p-3 sm:p-4 md:p-6 lg:p-8">
       <div className="max-w-7xl mx-auto">
       {/* Header */}
-      <div className="mb-4 sm:mb-6 md:mb-8 p-4 sm:p-5 md:p-6 rounded-xl sm:rounded-2xl bg-gradient-to-r from-[#1D4ED8] via-[#1E40AF] to-[#0F2B6B] shadow-lg sm:shadow-xl shadow-blue-500/20 dark:shadow-blue-900/30">
+      <div className="mb-4 sm:mb-6 md:mb-8 p-4 sm:p-5 md:p-6 rounded-xl sm:rounded-2xl bg-gradient-to-r from-[#0B8055] via-[#0B8055] to-[#0B2018] shadow-lg sm:shadow-xl shadow-blue-500/20 dark:shadow-blue-900/30">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4">
           <div>
             <h1 className="text-xl sm:text-2xl md:text-3xl text-white mb-1 sm:mb-2">Transaction History</h1>
@@ -197,8 +197,8 @@ export default function TransactionHistoryPage() {
           <Card className="border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition-shadow">
             <CardContent className="p-3 sm:p-4 md:p-6">
               <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
-                <div className="p-2 sm:p-2.5 md:p-3 rounded-lg sm:rounded-xl bg-[#3B82F6]/10 dark:bg-blue-950/30">
-                  <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-[#3B82F6] dark:text-blue-400" />
+                <div className="p-2 sm:p-2.5 md:p-3 rounded-lg sm:rounded-xl bg-[#16C784]/10 dark:bg-blue-950/30">
+                  <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-[#16C784] dark:text-blue-400" />
                 </div>
                 <div>
                   <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mb-0.5">Total Spent</p>
@@ -248,7 +248,7 @@ export default function TransactionHistoryPage() {
 
       {/* Transactions Table */}
       <Card className="border-0 dark:border dark:border-gray-700 bg-white dark:bg-gray-800 shadow-lg sm:shadow-xl overflow-hidden">
-        <div className="h-1 bg-gradient-to-r from-[#3B82F6] via-[#2563EB] to-[#1D4ED8]"></div>
+        <div className="h-1 bg-gradient-to-r from-[#16C784] via-[#0EA968] to-[#0B8055]"></div>
         <CardHeader className="border-b border-blue-100 dark:border-gray-700 bg-gradient-to-r from-blue-50 to-transparent dark:from-blue-950/30 dark:to-transparent p-3 sm:p-4 md:p-6">
           <CardTitle className="text-gray-900 dark:text-white text-base sm:text-lg md:text-xl">
             All Transactions {transactions.length > 0 && `(${transactions.length})`}
@@ -257,7 +257,7 @@ export default function TransactionHistoryPage() {
         <CardContent className="p-0">
           {isLoading ? (
             <div className="flex flex-col items-center justify-center py-16">
-              <Loader2 className="w-10 h-10 text-[#3B82F6] animate-spin mb-3" />
+              <Loader2 className="w-10 h-10 text-[#16C784] animate-spin mb-3" />
               <p className="text-gray-600 dark:text-gray-400">Loading transactions...</p>
             </div>
           ) : error ? (
@@ -266,7 +266,7 @@ export default function TransactionHistoryPage() {
               <p className="text-gray-600 dark:text-gray-400 mb-4 text-center">{error}</p>
               <Button 
                 onClick={fetchTransactions}
-                className="bg-gradient-to-r from-[#3B82F6] to-[#2563EB] hover:from-[#2563EB] hover:to-[#1D4ED8] text-white"
+                className="bg-gradient-to-r from-[#16C784] to-[#0EA968] hover:from-[#0EA968] hover:to-[#0B8055] text-white"
               >
                 <RefreshCcw className="w-4 h-4 mr-2" />
                 Try Again

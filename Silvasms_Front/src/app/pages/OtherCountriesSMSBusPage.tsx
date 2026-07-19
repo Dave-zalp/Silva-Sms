@@ -222,9 +222,9 @@ export default function OtherCountriesSMSBusPage() {
 
   if (activePurchase) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-[#0A0F1E] via-[#0F1729] to-[#1E2A45] p-4 sm:p-6 lg:p-8">
+      <div className="min-h-screen bg-gradient-to-br from-[#0A0D0B] via-[#111713] to-[#1B241D] p-4 sm:p-6 lg:p-8">
         <div className="max-w-2xl mx-auto">
-          <div className="mb-6 p-6 rounded-2xl bg-gradient-to-r from-[#1D4ED8] via-[#1E40AF] to-[#0F2B6B] shadow-xl shadow-blue-500/20">
+          <div className="mb-6 p-6 rounded-2xl bg-gradient-to-r from-[#0B8055] via-[#0B8055] to-[#0B2018] shadow-xl shadow-blue-500/20">
             <div className="flex items-center gap-3 mb-4">
               <Button
                 onClick={() => { setActivePurchase(null); setOtpCode(''); stopPolling(); }}
@@ -239,7 +239,7 @@ export default function OtherCountriesSMSBusPage() {
             <p className="text-blue-100 ml-12">Your number is active and waiting for verification code</p>
           </div>
 
-          <Card className="border-0 shadow-xl bg-white dark:bg-[#1E2A45]">
+          <Card className="border-0 shadow-xl bg-white dark:bg-[#1B241D]">
             <CardContent className="p-6">
               <div className="mb-6 text-center">
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
@@ -338,9 +338,9 @@ export default function OtherCountriesSMSBusPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#0A0F1E] via-[#0F1729] to-[#1E2A45] p-4 sm:p-6 lg:p-8">
+    <div className="min-h-screen bg-gradient-to-br from-[#0A0D0B] via-[#111713] to-[#1B241D] p-4 sm:p-6 lg:p-8">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-6 p-6 rounded-2xl bg-gradient-to-r from-[#1D4ED8] via-[#1E40AF] to-[#0F2B6B] shadow-xl shadow-blue-500/20">
+        <div className="mb-6 p-6 rounded-2xl bg-gradient-to-r from-[#0B8055] via-[#0B8055] to-[#0B2018] shadow-xl shadow-blue-500/20">
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-2xl sm:text-3xl text-white mb-2">Other Countries</h1>
@@ -359,7 +359,7 @@ export default function OtherCountriesSMSBusPage() {
           </div>
         </div>
 
-        <Card className="mb-6 border-0 shadow-lg bg-white dark:bg-[#1E2A45]">
+        <Card className="mb-6 border-0 shadow-lg bg-white dark:bg-[#1B241D]">
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
@@ -383,7 +383,7 @@ export default function OtherCountriesSMSBusPage() {
               placeholder="Search services..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-[#1E2A45] text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-[#1B241D] text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             />
           </div>
         </div>
@@ -394,7 +394,7 @@ export default function OtherCountriesSMSBusPage() {
             <p className="text-gray-600 dark:text-gray-400">Loading services...</p>
           </div>
         ) : filteredServices.length === 0 ? (
-          <Card className="border-0 shadow-lg bg-white dark:bg-[#1E2A45]">
+          <Card className="border-0 shadow-lg bg-white dark:bg-[#1B241D]">
             <CardContent className="p-12 text-center">
               <AlertCircle className="w-16 h-16 text-gray-400 mx-auto mb-4" />
               <p className="text-gray-600 dark:text-gray-400 mb-2">No services found</p>
@@ -406,7 +406,7 @@ export default function OtherCountriesSMSBusPage() {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {filteredServices.map((service) => (
-              <Card key={service.service_code} className={cn("border-0 shadow-lg bg-white dark:bg-[#1E2A45] transition-all hover:shadow-xl", service.count === 0 && "opacity-50")}>
+              <Card key={service.service_code} className={cn("border-0 shadow-lg bg-white dark:bg-[#1B241D] transition-all hover:shadow-xl", service.count === 0 && "opacity-50")}>
                 <CardHeader className="pb-3">
                   <CardTitle className="text-lg font-semibold text-gray-900 dark:text-white">
                     {service.service_name}

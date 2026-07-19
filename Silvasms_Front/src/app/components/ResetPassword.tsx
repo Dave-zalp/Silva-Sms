@@ -9,8 +9,20 @@ import { Card, CardContent } from './ui/card';
 import { Alert, AlertDescription } from './ui/alert';
 import { api, formatApiError } from '../utils/api';
 import { toast } from 'sonner@2.0.3';
-import { ImageWithFallback } from './figma/ImageWithFallback';
-import logoImage from 'figma:asset/2226b3396cb7765688c486ec123c298ea47bd028.png';
+
+function Wordmark() {
+  return (
+    <span className="inline-flex items-center gap-2 justify-center">
+      <span className="w-9 h-9 rounded-md bg-blue-600/10 border border-blue-600/30 flex items-center justify-center">
+        <span className="signal-dot w-1.5 h-1.5 rounded-full bg-blue-600" />
+      </span>
+      <span className="text-2xl sm:text-3xl" style={{ fontFamily: 'var(--font-display)' }}>
+        <span className="font-semibold text-black dark:text-white">Silva</span>
+        <span className="font-semibold text-blue-600">-Sms</span>
+      </span>
+    </span>
+  );
+}
 
 // Reset Password Component
 interface ResetPasswordProps {
@@ -42,10 +54,10 @@ export default function ResetPassword({ onSignIn }: ResetPasswordProps) {
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-red-50 dark:from-black dark:via-gray-950 dark:to-black flex items-center justify-center px-4 py-12">
+      <div className="min-h-screen bg-gradient-to-br from-[#EAFBF3] via-white to-white dark:from-black dark:via-gray-950 dark:to-black flex items-center justify-center px-4 py-12">
         {/* Animated Background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-red-400/10 dark:bg-red-600/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-400/10 dark:bg-blue-600/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-green-400/10 dark:bg-green-600/10 rounded-full blur-3xl"></div>
         </div>
 
@@ -59,11 +71,7 @@ export default function ResetPassword({ onSignIn }: ResetPasswordProps) {
           <div className="text-center mb-8">
             <div className="flex items-center justify-center mb-6">
               <Link to="/" className="inline-block hover:opacity-80 transition-opacity">
-                <ImageWithFallback 
-                  src={logoImage} 
-                  alt="MagicSMS Logo" 
-                  className="h-24 w-auto object-contain"
-                />
+                <Wordmark />
               </Link>
             </div>
           </div>
@@ -84,9 +92,9 @@ export default function ResetPassword({ onSignIn }: ResetPasswordProps) {
               <p className="text-gray-600 dark:text-gray-400 mb-2 leading-relaxed">
                 We've sent password reset instructions to
               </p>
-              <p className="text-red-600 dark:text-red-400 mb-6">{email}</p>
+              <p className="text-blue-600 dark:text-blue-400 mb-6">{email}</p>
               
-              <div className="bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-800 rounded-xl p-4 mb-6">
+              <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 rounded-xl p-4 mb-6">
                 <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
                   Click the link in the email to reset your password. The link will expire in 1 hour for security reasons.
                 </p>
@@ -94,7 +102,7 @@ export default function ResetPassword({ onSignIn }: ResetPasswordProps) {
 
               <Button
                 onClick={onSignIn}
-                className="w-full h-12 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white shadow-lg shadow-red-500/30 group mb-4"
+                className="w-full h-12 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg shadow-blue-500/30 group mb-4"
               >
                 <ArrowLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" />
                 Back to Sign In
@@ -113,7 +121,7 @@ export default function ResetPassword({ onSignIn }: ResetPasswordProps) {
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-500 dark:text-gray-500">
               Need help?{' '}
-              <a href="https://t.me/@LEGITSUPPORT2" target="_blank" rel="noopener noreferrer" className="text-red-600 dark:text-red-400 hover:underline">
+              <a href="https://t.me/@LEGITSUPPORT2" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
                 Contact support
               </a>
             </p>
@@ -124,11 +132,11 @@ export default function ResetPassword({ onSignIn }: ResetPasswordProps) {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-red-50 dark:from-black dark:via-gray-950 dark:to-black flex items-center justify-center px-4 py-12">
+    <div className="min-h-screen bg-gradient-to-br from-[#EAFBF3] via-white to-white dark:from-black dark:via-gray-950 dark:to-black flex items-center justify-center px-4 py-12">
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-red-400/10 dark:bg-red-600/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-400/10 dark:bg-pink-600/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-400/10 dark:bg-blue-600/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-300/10 dark:bg-blue-800/10 rounded-full blur-3xl"></div>
       </div>
 
       <motion.div
@@ -146,11 +154,7 @@ export default function ResetPassword({ onSignIn }: ResetPasswordProps) {
             className="flex items-center justify-center mb-6"
           >
             <Link to="/" className="inline-block hover:opacity-80 transition-opacity">
-              <ImageWithFallback 
-                src={logoImage} 
-                alt="MagicSMS Logo" 
-                className="h-24 w-auto object-contain"
-              />
+              <Wordmark />
             </Link>
           </motion.div>
           <h1 className="text-2xl sm:text-3xl text-black dark:text-white mb-2">Reset Password</h1>
@@ -163,9 +167,9 @@ export default function ResetPassword({ onSignIn }: ResetPasswordProps) {
         <Card className="border-2 border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-2xl">
           <CardContent className="p-6 sm:p-8">
             {/* Info Box */}
-            <div className="bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-800 rounded-xl p-4 mb-6">
+            <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 rounded-xl p-4 mb-6">
               <div className="flex gap-3">
-                <Lock className="w-5 h-5 text-red-600 dark:text-red-400 flex-shrink-0 mt-0.5" />
+                <Lock className="w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-sm text-gray-700 dark:text-gray-300 mb-1">
                     Forgot your password? No problem!
@@ -214,7 +218,7 @@ export default function ResetPassword({ onSignIn }: ResetPasswordProps) {
               <Button
                 type="submit"
                 disabled={isLoading || !email}
-                className="w-full h-12 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white shadow-lg shadow-red-500/30 group disabled:opacity-50"
+                className="w-full h-12 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg shadow-blue-500/30 group disabled:opacity-50"
               >
                 {isLoading ? (
                   <span>Sending instructions...</span>
@@ -251,7 +255,7 @@ export default function ResetPassword({ onSignIn }: ResetPasswordProps) {
               href="https://t.me/@LEGITSUPPORT2"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-red-600 dark:text-red-400 hover:underline inline-flex items-center gap-1"
+              className="text-sm text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-1"
             >
               Contact Support
               <ArrowRight className="w-3 h-3" />

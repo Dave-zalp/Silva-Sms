@@ -269,28 +269,28 @@ export default function AllCountriesPage() {
   );
 
   return (
-    <div className="min-h-screen bg-[#0A0F1E] p-3 sm:p-6">
+    <div className="min-h-screen bg-[#0A0D0B] p-3 sm:p-6">
       <div className="max-w-2xl mx-auto">
         {/* Header */}
         <div className="mb-4 sm:mb-5">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
-            <h1 className="text-lg sm:text-2xl font-bold text-[#F1F5F9]">
+            <h1 className="text-lg sm:text-2xl font-bold text-[#EAF2ED]">
               All Countries 🌍
             </h1>
             {!isLoadingBalance && (
-              <div className="flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1.5 bg-[#1E2A45] rounded-lg border border-[#2A3A5C]">
-                <span className="text-[10px] sm:text-xs text-[#94A3B8]">Balance:</span>
-                <span className="text-xs sm:text-sm font-semibold text-[#3B82F6]">{formatNaira(userBalance)}</span>
+              <div className="flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1.5 bg-[#1B241D] rounded-lg border border-[#24352A]">
+                <span className="text-[10px] sm:text-xs text-[#8CA398]">Balance:</span>
+                <span className="text-xs sm:text-sm font-semibold text-[#16C784]">{formatNaira(userBalance)}</span>
               </div>
             )}
           </div>
-          <p className="text-xs text-[#94A3B8]">
+          <p className="text-xs text-[#8CA398]">
             Select a country and service to purchase a phone number for SMS verification
           </p>
         </div>
 
         {/* Step 1: Select Country */}
-        <div className="bg-gradient-to-br from-[#1D4ED8] to-[#2563EB] rounded-xl sm:rounded-2xl p-3.5 sm:p-5 mb-4 shadow-xl">
+        <div className="bg-gradient-to-br from-[#0B8055] to-[#0EA968] rounded-xl sm:rounded-2xl p-3.5 sm:p-5 mb-4 shadow-xl">
           <div className="flex items-center gap-2 mb-3">
             <div className="w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-white/20 flex items-center justify-center text-white text-sm sm:text-lg font-bold">
               1
@@ -320,18 +320,18 @@ export default function AllCountriesPage() {
 
                   {/* Dropdown Menu */}
                   {isCountryDropdownOpen && (
-                    <div className="absolute top-full left-0 right-0 mt-2 bg-[#0F1729] border border-[#2A3A5C] rounded-lg sm:rounded-xl shadow-2xl z-50 max-h-[250px] sm:max-h-[350px] overflow-hidden flex flex-col">
+                    <div className="absolute top-full left-0 right-0 mt-2 bg-[#111713] border border-[#24352A] rounded-lg sm:rounded-xl shadow-2xl z-50 max-h-[250px] sm:max-h-[350px] overflow-hidden flex flex-col">
                       {/* Search Input Inside Dropdown */}
-                      <div className="p-2 sm:p-3 border-b border-[#2A3A5C] sticky top-0 bg-[#0F1729]">
+                      <div className="p-2 sm:p-3 border-b border-[#24352A] sticky top-0 bg-[#111713]">
                         <div className="relative">
-                          <Search className="absolute left-2.5 top-1/2 transform -translate-y-1/2 w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#64748B]" />
+                          <Search className="absolute left-2.5 top-1/2 transform -translate-y-1/2 w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#6B8378]" />
                           <input
                             type="text"
                             placeholder="Search countries..."
                             value={countrySearchQuery}
                             onChange={(e) => setCountrySearchQuery(e.target.value)}
                             onClick={(e) => e.stopPropagation()}
-                            className="w-full pl-8 sm:pl-9 pr-3 py-1.5 sm:py-2 bg-[#1E2A45] border border-[#2A3A5C] rounded-lg text-base text-[#F1F5F9] placeholder:text-[#64748B] focus:outline-none focus:ring-2 focus:ring-[#3B82F6]"
+                            className="w-full pl-8 sm:pl-9 pr-3 py-1.5 sm:py-2 bg-[#1B241D] border border-[#24352A] rounded-lg text-base text-[#EAF2ED] placeholder:text-[#6B8378] focus:outline-none focus:ring-2 focus:ring-[#16C784]"
                             autoFocus
                           />
                         </div>
@@ -344,20 +344,20 @@ export default function AllCountriesPage() {
                             <button
                               key={country.id}
                               onClick={() => handleCountrySelect(country)}
-                              className="w-full text-left p-2.5 sm:p-3 border-b border-[#2A3A5C] hover:bg-[#1E2A45] transition-colors flex items-center gap-2"
+                              className="w-full text-left p-2.5 sm:p-3 border-b border-[#24352A] hover:bg-[#1B241D] transition-colors flex items-center gap-2"
                             >
                               <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-br from-pink-500 to-orange-500 flex items-center justify-center flex-shrink-0">
                                 <span className="text-white text-[10px] sm:text-xs font-bold">{getCountryCode(country.name)}</span>
                               </div>
-                              <div className="text-xs sm:text-sm text-[#F1F5F9] font-medium">
+                              <div className="text-xs sm:text-sm text-[#EAF2ED] font-medium">
                                 {country.name}
                               </div>
                             </button>
                           ))
                         ) : (
                           <div className="p-6 sm:p-8 text-center">
-                            <AlertCircle className="w-8 h-8 sm:w-10 sm:h-10 text-[#64748B] mx-auto mb-2" />
-                            <p className="text-xs sm:text-sm text-[#94A3B8]">No countries found</p>
+                            <AlertCircle className="w-8 h-8 sm:w-10 sm:h-10 text-[#6B8378] mx-auto mb-2" />
+                            <p className="text-xs sm:text-sm text-[#8CA398]">No countries found</p>
                           </div>
                         )}
                       </div>
@@ -400,7 +400,7 @@ export default function AllCountriesPage() {
 
         {/* Step 2: Select Service */}
         {selectedCountry && (
-          <div className="bg-gradient-to-br from-[#1D4ED8] to-[#2563EB] rounded-xl sm:rounded-2xl p-3.5 sm:p-5 mb-4 shadow-xl">
+          <div className="bg-gradient-to-br from-[#0B8055] to-[#0EA968] rounded-xl sm:rounded-2xl p-3.5 sm:p-5 mb-4 shadow-xl">
             <div className="flex items-center gap-2 mb-3">
               <div className="w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-white/20 flex items-center justify-center text-white text-sm sm:text-lg font-bold">
                 2
@@ -430,18 +430,18 @@ export default function AllCountriesPage() {
 
                     {/* Dropdown Menu */}
                     {isServiceDropdownOpen && (
-                      <div className="absolute top-full left-0 right-0 mt-2 bg-[#0F1729] border border-[#2A3A5C] rounded-lg sm:rounded-xl shadow-2xl z-50 max-h-[300px] sm:max-h-[400px] overflow-hidden flex flex-col">
+                      <div className="absolute top-full left-0 right-0 mt-2 bg-[#111713] border border-[#24352A] rounded-lg sm:rounded-xl shadow-2xl z-50 max-h-[300px] sm:max-h-[400px] overflow-hidden flex flex-col">
                         {/* Search Input Inside Dropdown */}
-                        <div className="p-2 sm:p-3 border-b border-[#2A3A5C] sticky top-0 bg-[#0F1729]">
+                        <div className="p-2 sm:p-3 border-b border-[#24352A] sticky top-0 bg-[#111713]">
                           <div className="relative">
-                            <Search className="absolute left-2.5 top-1/2 transform -translate-y-1/2 w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#64748B]" />
+                            <Search className="absolute left-2.5 top-1/2 transform -translate-y-1/2 w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#6B8378]" />
                             <input
                               type="text"
                               placeholder="Search services..."
                               value={serviceSearchQuery}
                               onChange={(e) => setServiceSearchQuery(e.target.value)}
                               onClick={(e) => e.stopPropagation()}
-                              className="w-full pl-8 sm:pl-9 pr-3 py-1.5 sm:py-2 bg-[#1E2A45] border border-[#2A3A5C] rounded-lg text-base text-[#F1F5F9] placeholder:text-[#64748B] focus:outline-none focus:ring-2 focus:ring-[#3B82F6]"
+                              className="w-full pl-8 sm:pl-9 pr-3 py-1.5 sm:py-2 bg-[#1B241D] border border-[#24352A] rounded-lg text-base text-[#EAF2ED] placeholder:text-[#6B8378] focus:outline-none focus:ring-2 focus:ring-[#16C784]"
                               autoFocus
                             />
                           </div>
@@ -454,20 +454,20 @@ export default function AllCountriesPage() {
                               <button
                                 key={service.code}
                                 onClick={() => handleServiceSelect(service)}
-                                className="w-full text-left p-2.5 sm:p-3 border-b border-[#2A3A5C] hover:bg-[#1E2A45] transition-colors"
+                                className="w-full text-left p-2.5 sm:p-3 border-b border-[#24352A] hover:bg-[#1B241D] transition-colors"
                               >
-                                <div className="text-xs sm:text-sm text-[#F1F5F9] font-medium">
+                                <div className="text-xs sm:text-sm text-[#EAF2ED] font-medium">
                                   {service.name}
                                 </div>
-                                <div className="text-[10px] sm:text-xs text-[#64748B] mt-0.5">
+                                <div className="text-[10px] sm:text-xs text-[#6B8378] mt-0.5">
                                   {service.code}
                                 </div>
                               </button>
                             ))
                           ) : (
                             <div className="p-6 sm:p-8 text-center">
-                              <AlertCircle className="w-8 h-8 sm:w-10 sm:h-10 text-[#64748B] mx-auto mb-2" />
-                              <p className="text-xs sm:text-sm text-[#94A3B8]">No services found</p>
+                              <AlertCircle className="w-8 h-8 sm:w-10 sm:h-10 text-[#6B8378] mx-auto mb-2" />
+                              <p className="text-xs sm:text-sm text-[#8CA398]">No services found</p>
                             </div>
                           )}
                         </div>
@@ -506,22 +506,22 @@ export default function AllCountriesPage() {
 
         {/* Step 3: Price & Purchase */}
         {selectedService && (
-          <div className="bg-[#1E2A45] border border-[#2A3A5C] rounded-xl sm:rounded-2xl p-3.5 sm:p-5 shadow-xl">
+          <div className="bg-[#1B241D] border border-[#24352A] rounded-xl sm:rounded-2xl p-3.5 sm:p-5 shadow-xl">
             {/* Price Display */}
             {isLoadingPrice ? (
-              <div className="bg-[#0F1729] border border-[#2A3A5C] rounded-lg sm:rounded-xl p-3 sm:p-4 flex items-center justify-center mb-4">
-                <Loader2 className="w-5 h-5 sm:w-6 sm:h-6 animate-spin text-[#3B82F6]" />
-                <span className="ml-2 text-xs sm:text-sm text-[#F1F5F9]">Loading price...</span>
+              <div className="bg-[#111713] border border-[#24352A] rounded-lg sm:rounded-xl p-3 sm:p-4 flex items-center justify-center mb-4">
+                <Loader2 className="w-5 h-5 sm:w-6 sm:h-6 animate-spin text-[#16C784]" />
+                <span className="ml-2 text-xs sm:text-sm text-[#EAF2ED]">Loading price...</span>
               </div>
             ) : priceError ? (
-              <div className="bg-[#0F1729] border border-[#EF4444]/30 rounded-lg sm:rounded-xl p-3 sm:p-4 mb-4">
+              <div className="bg-[#111713] border border-[#EF4444]/30 rounded-lg sm:rounded-xl p-3 sm:p-4 mb-4">
                 <div className="flex items-center gap-2 text-[#EF4444]">
                   <AlertCircle className="w-4 h-4 sm:w-5 sm:h-5" />
                   <p className="text-xs sm:text-sm">{priceError}</p>
                 </div>
               </div>
             ) : price !== null ? (
-              <div className="bg-gradient-to-br from-[#3B82F6] to-[#2563EB] rounded-lg sm:rounded-xl p-3 sm:p-4 mb-4">
+              <div className="bg-gradient-to-br from-[#16C784] to-[#0EA968] rounded-lg sm:rounded-xl p-3 sm:p-4 mb-4">
                 <p className="text-[10px] sm:text-xs text-white/80 mb-0.5">Total Price</p>
                 <p className="text-2xl sm:text-3xl font-bold text-white">{formatNaira(price)}</p>
               </div>
@@ -531,7 +531,7 @@ export default function AllCountriesPage() {
             <Button
               onClick={handleBuyNumber}
               disabled={isPurchasing || isLoadingPrice || !!priceError || price === null}
-              className="w-full py-3 sm:py-4 bg-[#3B82F6] hover:bg-[#2563EB] text-white rounded-lg sm:rounded-xl text-sm sm:text-base font-bold shadow-lg disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+              className="w-full py-3 sm:py-4 bg-[#16C784] hover:bg-[#0EA968] text-white rounded-lg sm:rounded-xl text-sm sm:text-base font-bold shadow-lg disabled:opacity-50 disabled:cursor-not-allowed transition-all"
             >
               {isPurchasing ? (
                 <>

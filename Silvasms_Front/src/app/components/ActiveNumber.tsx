@@ -109,7 +109,7 @@ export default function ActiveNumber({ number, country, onBack }: ActiveNumberPr
               <BreadcrumbItem>
                 <BreadcrumbLink 
                   onClick={onBack} 
-                  className="cursor-pointer flex items-center gap-1 text-[#2563EB] hover:text-[#1d4ed8]"
+                  className="cursor-pointer flex items-center gap-1 text-[#0EA968] hover:text-[#0B8055]"
                 >
                   <ChevronLeft className="w-4 h-4" />
                   Back
@@ -124,29 +124,29 @@ export default function ActiveNumber({ number, country, onBack }: ActiveNumberPr
         </div>
 
         {/* Active Number Card */}
-        <Card className="mb-6 border-2 border-[#2563EB] shadow-lg">
+        <Card className="mb-6 border-2 border-[#0EA968] shadow-lg">
           <CardContent className="pt-6">
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-2">
                 <span className="text-2xl">{country.flag}</span>
-                <span className="text-[#6B7280]">{country.name}</span>
+                <span className="text-[#6B7A72]">{country.name}</span>
               </div>
-              <Badge className="bg-[#2563EB] text-white">
+              <Badge className="bg-[#0EA968] text-white">
                 {number.service}
               </Badge>
             </div>
 
             {/* Phone Number Display */}
-            <div className="bg-[#DBEAFE] rounded-lg p-4 sm:p-6 mb-4">
+            <div className="bg-[#DFF5E9] rounded-lg p-4 sm:p-6 mb-4">
               <div className="flex items-center justify-between gap-2">
-                <span className="text-[#2563EB] text-lg sm:text-2xl break-all">{number.number}</span>
+                <span className="text-[#0EA968] text-lg sm:text-2xl break-all">{number.number}</span>
                 <Button
                   variant="ghost"
                   size="icon"
                   onClick={handleCopy}
                   className="hover:bg-white flex-shrink-0"
                 >
-                  <Copy className="w-5 h-5 text-[#2563EB]" />
+                  <Copy className="w-5 h-5 text-[#0EA968]" />
                 </Button>
               </div>
             </div>
@@ -154,11 +154,11 @@ export default function ActiveNumber({ number, country, onBack }: ActiveNumberPr
             {/* Timer */}
             <div className="space-y-2">
               <div className="flex items-center justify-between text-sm">
-                <div className="flex items-center gap-2 text-[#6B7280]">
+                <div className="flex items-center gap-2 text-[#6B7A72]">
                   <Clock className="w-4 h-4" />
                   <span>Time Remaining</span>
                 </div>
-                <span className="text-[#2563EB]">{formatTime(timeLeft)}</span>
+                <span className="text-[#0EA968]">{formatTime(timeLeft)}</span>
               </div>
               <Progress value={progressValue} className="h-2" />
             </div>
@@ -169,7 +169,7 @@ export default function ActiveNumber({ number, country, onBack }: ActiveNumberPr
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
-              <MessageSquare className="w-5 h-5 text-[#2563EB]" />
+              <MessageSquare className="w-5 h-5 text-[#0EA968]" />
               <h2 className="text-black">SMS Inbox</h2>
             </div>
             <Button
@@ -187,9 +187,9 @@ export default function ActiveNumber({ number, country, onBack }: ActiveNumberPr
           {/* Messages */}
           {messages.length === 0 ? (
             <div className="text-center py-12 border-2 border-dashed border-gray-200 rounded-lg">
-              <MessageSquare className="w-12 h-12 text-[#6B7280] mx-auto mb-3 opacity-50" />
-              <p className="text-[#6B7280] mb-2">Waiting for SMS...</p>
-              <p className="text-sm text-[#6B7280]">Messages will appear here when received</p>
+              <MessageSquare className="w-12 h-12 text-[#6B7A72] mx-auto mb-3 opacity-50" />
+              <p className="text-[#6B7A72] mb-2">Waiting for SMS...</p>
+              <p className="text-sm text-[#6B7A72]">Messages will appear here when received</p>
             </div>
           ) : (
             <div className="space-y-3">
@@ -197,8 +197,8 @@ export default function ActiveNumber({ number, country, onBack }: ActiveNumberPr
                 <Card key={sms.id} className="border border-gray-200 bg-gray-50">
                   <CardContent className="pt-4">
                     <div className="flex items-start justify-between mb-2">
-                      <span className="text-sm text-[#6B7280]">From: {sms.from}</span>
-                      <span className="text-sm text-[#6B7280]">{sms.timestamp}</span>
+                      <span className="text-sm text-[#6B7A72]">From: {sms.from}</span>
+                      <span className="text-sm text-[#6B7A72]">{sms.timestamp}</span>
                     </div>
                     <p className="text-black">{sms.message}</p>
                   </CardContent>

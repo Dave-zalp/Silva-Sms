@@ -139,11 +139,11 @@ export default function AuthPage({ defaultTab = 'signin' }: AuthPageProps) {
   const strength = passwordStrength(formData.password);
 
   return (
-    <div className="min-h-screen bg-[#0A0F1E] dark:bg-[#0A0F1E] flex items-center justify-center px-4 py-8 sm:py-12">
+    <div className="min-h-screen bg-[#0A0D0B] dark:bg-[#0A0D0B] flex items-center justify-center px-4 py-8 sm:py-12">
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-[#3B82F6]/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-[#2563EB]/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/4 left-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-[#16C784]/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-[#0EA968]/10 rounded-full blur-3xl"></div>
       </div>
 
       <motion.div
@@ -156,25 +156,25 @@ export default function AuthPage({ defaultTab = 'signin' }: AuthPageProps) {
         <div className="text-center mb-6">
           <Link to="/" className="inline-block hover:opacity-80 transition-opacity">
             <div className="flex items-center justify-center gap-2">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#3B82F6] rounded-lg flex items-center justify-center">
-                <MessageSquare className="w-5 h-5 sm:w-6 sm:h-6 text-white" strokeWidth={2.5} />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-[#16C784]/10 border border-[#16C784]/30 flex items-center justify-center">
+                <span className="signal-dot w-2 h-2 rounded-full bg-[#16C784]" />
               </div>
-              <div className="flex items-baseline gap-0">
-                <span className="text-2xl sm:text-3xl font-bold text-[#F1F5F9]">Golden</span>
-                <span className="text-2xl sm:text-3xl font-bold text-[#3B82F6]">SMS</span>
+              <div className="flex items-baseline gap-0" style={{ fontFamily: 'var(--font-display)' }}>
+                <span className="text-2xl sm:text-3xl font-semibold text-[#EAF2ED]">Silva</span>
+                <span className="text-2xl sm:text-3xl font-semibold text-[#16C784]">-Sms</span>
               </div>
             </div>
           </Link>
         </div>
 
         {/* Tab Switcher */}
-        <div className="bg-[#1E2A45] rounded-2xl p-1.5 mb-4 shadow-lg border border-[#2A3A5C] flex">
+        <div className="bg-[#1B241D] rounded-2xl p-1.5 mb-4 shadow-lg border border-[#24352A] flex">
           <button
             onClick={() => setActiveTab('signin')}
             className={`flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-semibold text-sm transition-all ${
               activeTab === 'signin'
-                ? 'bg-[#3B82F6] text-white shadow-md'
-                : 'text-[#94A3B8] hover:text-[#F1F5F9]'
+                ? 'bg-[#16C784] text-white shadow-md'
+                : 'text-[#8CA398] hover:text-[#EAF2ED]'
             }`}
           >
             <LogIn className="w-4 h-4" />
@@ -184,8 +184,8 @@ export default function AuthPage({ defaultTab = 'signin' }: AuthPageProps) {
             onClick={() => setActiveTab('signup')}
             className={`flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-semibold text-sm transition-all ${
               activeTab === 'signup'
-                ? 'bg-[#3B82F6] text-white shadow-md'
-                : 'text-[#94A3B8] hover:text-[#F1F5F9]'
+                ? 'bg-[#16C784] text-white shadow-md'
+                : 'text-[#8CA398] hover:text-[#EAF2ED]'
             }`}
           >
             <UserCircle className="w-4 h-4" />
@@ -194,7 +194,7 @@ export default function AuthPage({ defaultTab = 'signin' }: AuthPageProps) {
         </div>
 
         {/* Form Container */}
-        <div className="bg-[#1E2A45] rounded-2xl shadow-2xl border border-[#2A3A5C] overflow-hidden">
+        <div className="bg-[#1B241D] rounded-2xl shadow-2xl border border-[#24352A] overflow-hidden">
           <AnimatePresence mode="wait">
             {activeTab === 'signin' ? (
               <motion.div
@@ -206,8 +206,8 @@ export default function AuthPage({ defaultTab = 'signin' }: AuthPageProps) {
                 className="p-6 sm:p-8"
               >
                 <div className="mb-6">
-                  <h2 className="text-2xl sm:text-3xl font-bold text-[#F1F5F9] mb-2">Sign In</h2>
-                  <p className="text-[#94A3B8]">Enter your credentials to access your account</p>
+                  <h2 className="text-2xl sm:text-3xl font-bold text-[#EAF2ED] mb-2">Sign In</h2>
+                  <p className="text-[#8CA398]">Enter your credentials to access your account</p>
                 </div>
 
                 <form onSubmit={handleSignIn} className="space-y-5">
@@ -220,16 +220,16 @@ export default function AuthPage({ defaultTab = 'signin' }: AuthPageProps) {
 
                   {/* Email Field */}
                   <div className="space-y-2">
-                    <Label htmlFor="login" className="text-[#F1F5F9]">Email</Label>
+                    <Label htmlFor="login" className="text-[#EAF2ED]">Email</Label>
                     <div className="relative">
-                      <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#64748B]" />
+                      <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#6B8378]" />
                       <Input
                         id="login"
                         type="text"
                         placeholder="your@email.com"
                         value={login}
                         onChange={(e) => setLogin(e.target.value)}
-                        className="pl-10 h-12 border-[#2A3A5C] bg-[#0F1729] text-[#F1F5F9] placeholder:text-[#64748B] focus:border-[#3B82F6]"
+                        className="pl-10 h-12 border-[#24352A] bg-[#111713] text-[#EAF2ED] placeholder:text-[#6B8378] focus:border-[#16C784]"
                         required
                         disabled={isLoadingSignIn}
                       />
@@ -238,23 +238,23 @@ export default function AuthPage({ defaultTab = 'signin' }: AuthPageProps) {
 
                   {/* Password Field */}
                   <div className="space-y-2">
-                    <Label htmlFor="password" className="text-[#F1F5F9]">Password</Label>
+                    <Label htmlFor="password" className="text-[#EAF2ED]">Password</Label>
                     <div className="relative">
-                      <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#64748B]" />
+                      <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#6B8378]" />
                       <Input
                         id="password"
                         type={showPassword ? 'text' : 'password'}
                         placeholder="••••••••"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
-                        className="pl-10 pr-10 h-12 border-[#2A3A5C] bg-[#0F1729] text-[#F1F5F9] placeholder:text-[#64748B] focus:border-[#3B82F6]"
+                        className="pl-10 pr-10 h-12 border-[#24352A] bg-[#111713] text-[#EAF2ED] placeholder:text-[#6B8378] focus:border-[#16C784]"
                         required
                         disabled={isLoadingSignIn}
                       />
                       <button
                         type="button"
                         onClick={() => setShowPassword(!showPassword)}
-                        className="absolute right-3 top-1/2 -translate-y-1/2 text-[#64748B] hover:text-[#94A3B8]"
+                        className="absolute right-3 top-1/2 -translate-y-1/2 text-[#6B8378] hover:text-[#8CA398]"
                       >
                         {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                       </button>
@@ -265,7 +265,7 @@ export default function AuthPage({ defaultTab = 'signin' }: AuthPageProps) {
                   <Button
                     type="submit"
                     disabled={isLoadingSignIn}
-                    className="w-full h-12 bg-[#3B82F6] hover:bg-[#2563EB] text-white shadow-lg group transition-all duration-200"
+                    className="w-full h-12 bg-[#16C784] hover:bg-[#0EA968] text-white shadow-lg group transition-all duration-200"
                   >
                     {isLoadingSignIn ? (
                       <span>Signing in...</span>
@@ -281,7 +281,7 @@ export default function AuthPage({ defaultTab = 'signin' }: AuthPageProps) {
                   <div className="text-center">
                     <Link
                       to="/reset-password"
-                      className="text-sm text-[#3B82F6] hover:text-[#2563EB] transition-colors font-medium"
+                      className="text-sm text-[#16C784] hover:text-[#0EA968] transition-colors font-medium"
                     >
                       Forgot Password?
                     </Link>
@@ -298,8 +298,8 @@ export default function AuthPage({ defaultTab = 'signin' }: AuthPageProps) {
                 className="p-6 sm:p-8"
               >
                 <div className="mb-6">
-                  <h2 className="text-2xl sm:text-3xl font-bold text-[#F1F5F9] mb-2">Sign Up</h2>
-                  <p className="text-[#94A3B8]">Create your account to get started</p>
+                  <h2 className="text-2xl sm:text-3xl font-bold text-[#EAF2ED] mb-2">Sign Up</h2>
+                  <p className="text-[#8CA398]">Create your account to get started</p>
                 </div>
 
                 <form onSubmit={handleSignUp} className="space-y-4">
@@ -312,19 +312,19 @@ export default function AuthPage({ defaultTab = 'signin' }: AuthPageProps) {
 
                   {/* Username Field */}
                   <div className="space-y-1.5">
-                    <Label htmlFor="username" className="text-[#F1F5F9]">Username</Label>
+                    <Label htmlFor="username" className="text-[#EAF2ED]">Username</Label>
                     <div className="relative">
-                      <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#64748B]" />
+                      <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#6B8378]" />
                       <Input
                         id="username"
                         type="text"
                         placeholder="johndoe"
                         value={formData.username}
                         onChange={(e) => handleChange('username', e.target.value)}
-                        className={`pl-10 h-11 bg-[#0F1729] text-[#F1F5F9] placeholder:text-[#64748B] ${
+                        className={`pl-10 h-11 bg-[#111713] text-[#EAF2ED] placeholder:text-[#6B8378] ${
                           fieldErrors.username 
                             ? 'border-red-500' 
-                            : 'border-[#2A3A5C] focus:border-[#3B82F6]'
+                            : 'border-[#24352A] focus:border-[#16C784]'
                         }`}
                         required
                         disabled={isLoadingSignUp}
@@ -337,19 +337,19 @@ export default function AuthPage({ defaultTab = 'signin' }: AuthPageProps) {
 
                   {/* Email Field */}
                   <div className="space-y-1.5">
-                    <Label htmlFor="email" className="text-[#F1F5F9]">Email</Label>
+                    <Label htmlFor="email" className="text-[#EAF2ED]">Email</Label>
                     <div className="relative">
-                      <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#64748B]" />
+                      <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#6B8378]" />
                       <Input
                         id="email"
                         type="email"
                         placeholder="you@example.com"
                         value={formData.email}
                         onChange={(e) => handleChange('email', e.target.value)}
-                        className={`pl-10 h-11 bg-[#0F1729] text-[#F1F5F9] placeholder:text-[#64748B] ${
+                        className={`pl-10 h-11 bg-[#111713] text-[#EAF2ED] placeholder:text-[#6B8378] ${
                           fieldErrors.email 
                             ? 'border-red-500' 
-                            : 'border-[#2A3A5C] focus:border-[#3B82F6]'
+                            : 'border-[#24352A] focus:border-[#16C784]'
                         }`}
                         required
                         disabled={isLoadingSignUp}
@@ -362,19 +362,19 @@ export default function AuthPage({ defaultTab = 'signin' }: AuthPageProps) {
 
                   {/* Phone Field */}
                   <div className="space-y-1.5">
-                    <Label htmlFor="phoneNumber" className="text-[#F1F5F9]">Phone Number</Label>
+                    <Label htmlFor="phoneNumber" className="text-[#EAF2ED]">Phone Number</Label>
                     <div className="relative">
-                      <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#64748B]" />
+                      <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#6B8378]" />
                       <Input
                         id="phoneNumber"
                         type="tel"
                         placeholder="0701443xx54"
                         value={formData.phoneNumber}
                         onChange={(e) => handleChange('phoneNumber', e.target.value)}
-                        className={`pl-10 h-11 bg-[#0F1729] text-[#F1F5F9] placeholder:text-[#64748B] ${
+                        className={`pl-10 h-11 bg-[#111713] text-[#EAF2ED] placeholder:text-[#6B8378] ${
                           fieldErrors.phone_number 
                             ? 'border-red-500' 
-                            : 'border-[#2A3A5C] focus:border-[#3B82F6]'
+                            : 'border-[#24352A] focus:border-[#16C784]'
                         }`}
                         required
                         disabled={isLoadingSignUp}
@@ -387,23 +387,23 @@ export default function AuthPage({ defaultTab = 'signin' }: AuthPageProps) {
 
                   {/* Password Field */}
                   <div className="space-y-1.5">
-                    <Label htmlFor="signup-password" className="text-[#F1F5F9]">Password</Label>
+                    <Label htmlFor="signup-password" className="text-[#EAF2ED]">Password</Label>
                     <div className="relative">
-                      <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#64748B]" />
+                      <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#6B8378]" />
                       <Input
                         id="signup-password"
                         type={showSignUpPassword ? 'text' : 'password'}
                         placeholder="••••••••"
                         value={formData.password}
                         onChange={(e) => handleChange('password', e.target.value)}
-                        className="pl-10 pr-10 h-11 border-[#2A3A5C] bg-[#0F1729] text-[#F1F5F9] placeholder:text-[#64748B] focus:border-[#3B82F6]"
+                        className="pl-10 pr-10 h-11 border-[#24352A] bg-[#111713] text-[#EAF2ED] placeholder:text-[#6B8378] focus:border-[#16C784]"
                         required
                         disabled={isLoadingSignUp}
                       />
                       <button
                         type="button"
                         onClick={() => setShowSignUpPassword(!showSignUpPassword)}
-                        className="absolute right-3 top-1/2 -translate-y-1/2 text-[#64748B] hover:text-[#94A3B8]"
+                        className="absolute right-3 top-1/2 -translate-y-1/2 text-[#6B8378] hover:text-[#8CA398]"
                       >
                         {showSignUpPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                       </button>
@@ -412,23 +412,23 @@ export default function AuthPage({ defaultTab = 'signin' }: AuthPageProps) {
 
                   {/* Confirm Password */}
                   <div className="space-y-1.5">
-                    <Label htmlFor="confirmPassword" className="text-[#F1F5F9]">Confirm Password</Label>
+                    <Label htmlFor="confirmPassword" className="text-[#EAF2ED]">Confirm Password</Label>
                     <div className="relative">
-                      <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#64748B]" />
+                      <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#6B8378]" />
                       <Input
                         id="confirmPassword"
                         type={showConfirmPassword ? 'text' : 'password'}
                         placeholder="••••••••"
                         value={formData.confirmPassword}
                         onChange={(e) => handleChange('confirmPassword', e.target.value)}
-                        className="pl-10 pr-10 h-11 border-[#2A3A5C] bg-[#0F1729] text-[#F1F5F9] placeholder:text-[#64748B] focus:border-[#3B82F6]"
+                        className="pl-10 pr-10 h-11 border-[#24352A] bg-[#111713] text-[#EAF2ED] placeholder:text-[#6B8378] focus:border-[#16C784]"
                         required
                         disabled={isLoadingSignUp}
                       />
                       <button
                         type="button"
                         onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                        className="absolute right-3 top-1/2 -translate-y-1/2 text-[#64748B] hover:text-[#94A3B8]"
+                        className="absolute right-3 top-1/2 -translate-y-1/2 text-[#6B8378] hover:text-[#8CA398]"
                       >
                         {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                       </button>
@@ -446,7 +446,7 @@ export default function AuthPage({ defaultTab = 'signin' }: AuthPageProps) {
                       onCheckedChange={(checked) => setAgreedToTerms(checked as boolean)}
                       className="mt-0.5"
                     />
-                    <label htmlFor="terms" className="text-xs text-[#94A3B8] cursor-pointer">
+                    <label htmlFor="terms" className="text-xs text-[#8CA398] cursor-pointer">
                       I agree to the Terms of Service and Privacy Policy
                     </label>
                   </div>
@@ -455,7 +455,7 @@ export default function AuthPage({ defaultTab = 'signin' }: AuthPageProps) {
                   <Button
                     type="submit"
                     disabled={isLoadingSignUp || !agreedToTerms || formData.password !== formData.confirmPassword}
-                    className="w-full h-12 bg-[#3B82F6] hover:bg-[#2563EB] text-white shadow-lg group disabled:opacity-50 transition-all duration-200"
+                    className="w-full h-12 bg-[#16C784] hover:bg-[#0EA968] text-white shadow-lg group disabled:opacity-50 transition-all duration-200"
                   >
                     {isLoadingSignUp ? (
                       <span>Creating account...</span>
@@ -473,9 +473,9 @@ export default function AuthPage({ defaultTab = 'signin' }: AuthPageProps) {
         </div>
 
         {/* Trust Indicators */}
-        <div className="mt-6 flex items-center justify-center gap-4 sm:gap-6 text-xs text-[#94A3B8]">
+        <div className="mt-6 flex items-center justify-center gap-4 sm:gap-6 text-xs text-[#8CA398]">
           <div className="flex items-center gap-1.5">
-            <div className="w-2 h-2 bg-[#22C55E] rounded-full"></div>
+            <div className="w-2 h-2 bg-[#16C784] rounded-full"></div>
             <span>Secure</span>
           </div>
           <div className="flex items-center gap-1.5">

@@ -182,11 +182,11 @@ export default function DashboardPage() {
 
   return (
     <>
-      <div className="min-h-screen bg-[#0A0F1E] p-4 sm:p-6 lg:p-8">
+      <div className="min-h-screen bg-[#0A0D0B] p-4 sm:p-6 lg:p-8">
         <div className="max-w-7xl mx-auto space-y-6">
           
           {/* Welcome Banner Card */}
-          <div className="relative overflow-hidden rounded-xl bg-gradient-to-r from-[#1D4ED8] via-[#1E40AF] to-[#0F2B6B] p-6 sm:p-8 shadow-2xl">
+          <div className="relative overflow-hidden rounded-xl bg-gradient-to-r from-[#0B8055] via-[#0B8055] to-[#0B2018] p-6 sm:p-8 shadow-2xl">
             {/* Radial glow overlay */}
             <div className="absolute inset-0 bg-gradient-radial from-[rgba(99,179,237,0.15)] to-transparent opacity-50" style={{
               background: 'radial-gradient(ellipse at 80% 50%, rgba(99,179,237,0.15) 0%, transparent 60%)'
@@ -217,7 +217,7 @@ export default function DashboardPage() {
                 <div className="flex flex-col gap-3 w-full lg:w-40">
                   <Button
                     onClick={() => navigate('/dashboard/fund-wallet')}
-                    className="bg-white hover:bg-white/90 text-[#1D4ED8] font-semibold px-5 rounded-lg h-11 w-full shadow-lg transition-all"
+                    className="bg-white hover:bg-white/90 text-[#0B8055] font-semibold px-5 rounded-lg h-11 w-full shadow-lg transition-all"
                   >
                     <Wallet className="w-4 h-4 mr-2" />
                     Fund Wallet
@@ -231,18 +231,18 @@ export default function DashboardPage() {
           {/* Stats Cards Row */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {/* SMS Purchased */}
-            <div className="bg-[#1E2A45] rounded-xl p-5 border border-[#2A3A5C] hover:border-[#3B82F6] hover:shadow-[0_0_0_1px_rgba(59,130,246,0.2)] transition-all group">
+            <div className="bg-[#1B241D] rounded-xl p-5 border border-[#24352A] hover:border-[#16C784] hover:shadow-[0_0_0_1px_rgba(59,130,246,0.2)] transition-all group">
               <div className="flex items-start justify-between mb-4">
-                <div className="w-10 h-10 bg-[#1D4ED8] rounded-lg flex items-center justify-center">
+                <div className="w-10 h-10 bg-[#0B8055] rounded-lg flex items-center justify-center">
                   <MessageSquare className="w-5 h-5 text-white" />
                 </div>
-                <Activity className="w-4 h-4 text-[#64748B]" />
+                <Activity className="w-4 h-4 text-[#6B8378]" />
               </div>
-              <p className="text-[13px] text-[#94A3B8] mb-1">SMS Purchased</p>
-              <p className="text-2xl font-bold text-[#F1F5F9]">
+              <p className="text-[13px] text-[#8CA398] mb-1">SMS Purchased</p>
+              <p className="text-2xl font-bold text-[#EAF2ED]">
                 {isLoading ? '...' : `${dashboardStats?.total_sms_purchases || 0}`}
               </p>
-              <p className="text-xs text-[#64748B] mt-1">Lifetime total</p>
+              <p className="text-xs text-[#6B8378] mt-1">Lifetime total</p>
             </div>
 
             {/* Provider Switcher - Replaces Total Recharge */}
@@ -293,16 +293,16 @@ export default function DashboardPage() {
           </div>
 
           {/* Recent Purchase History */}
-          <div className="bg-[#1E2A45] rounded-xl border border-[#2A3A5C] overflow-hidden">
-            <div className="px-6 py-5 border-b border-[#2A3A5C] flex items-center justify-between">
+          <div className="bg-[#1B241D] rounded-xl border border-[#24352A] overflow-hidden">
+            <div className="px-6 py-5 border-b border-[#24352A] flex items-center justify-between">
               <div>
-                <h2 className="text-lg font-semibold text-[#F1F5F9]">Recent Purchases</h2>
-                <p className="text-[13px] text-[#64748B] mt-1">Your latest number purchases</p>
+                <h2 className="text-lg font-semibold text-[#EAF2ED]">Recent Purchases</h2>
+                <p className="text-[13px] text-[#6B8378] mt-1">Your latest number purchases</p>
               </div>
               <Button 
                 variant="ghost" 
                 onClick={() => navigate('/dashboard/numbers-history')}
-                className="text-[#3B82F6] hover:bg-[#0F1729] hover:underline font-semibold text-sm"
+                className="text-[#16C784] hover:bg-[#111713] hover:underline font-semibold text-sm"
               >
                 View All
                 <ArrowRight className="w-4 h-4 ml-1" />
@@ -312,8 +312,8 @@ export default function DashboardPage() {
             <div className="p-6">
               {isLoadingHistory ? (
                 <div className="flex flex-col items-center justify-center py-12">
-                  <Loader2 className="w-8 h-8 text-[#3B82F6] animate-spin mb-3" />
-                  <p className="text-sm text-[#64748B]">Loading history...</p>
+                  <Loader2 className="w-8 h-8 text-[#16C784] animate-spin mb-3" />
+                  <p className="text-sm text-[#6B8378]">Loading history...</p>
                 </div>
               ) : recentPurchases.length > 0 ? (
                 <div className="space-y-3">
@@ -322,21 +322,21 @@ export default function DashboardPage() {
                     return (
                       <div 
                         key={purchase.id}
-                        className="bg-[#0F1729] rounded-lg p-5 border border-[#2A3A5C] hover:border-[#3B82F6] transition-all"
+                        className="bg-[#111713] rounded-lg p-5 border border-[#24352A] hover:border-[#16C784] transition-all"
                       >
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                           <div className="flex-1 min-w-0">
                             <div className="flex items-center justify-between gap-3 mb-3">
-                              <p className="text-sm font-semibold text-[#F1F5F9] truncate">{serviceName}</p>
+                              <p className="text-sm font-semibold text-[#EAF2ED] truncate">{serviceName}</p>
                               {getStatusBadge(purchase.status, purchase.otp_code)}
                             </div>
                             
                             <div className="flex items-center gap-2 mb-2">
-                              <Phone className="w-4 h-4 text-[#94A3B8]" />
-                              <p className="text-sm text-[#F1F5F9] font-mono">{purchase.phone_number}</p>
+                              <Phone className="w-4 h-4 text-[#8CA398]" />
+                              <p className="text-sm text-[#EAF2ED] font-mono">{purchase.phone_number}</p>
                               <button
                                 onClick={() => handleCopy(purchase.phone_number, 'Phone number')}
-                                className="text-[#64748B] hover:text-[#3B82F6] transition-colors"
+                                className="text-[#6B8378] hover:text-[#16C784] transition-colors"
                                 title="Copy phone number"
                               >
                                 {copiedField === `phone-${purchase.id}` ? (
@@ -349,13 +349,13 @@ export default function DashboardPage() {
                             
                             {purchase.otp_code && (
                               <div className="flex items-center gap-2">
-                                <MessageSquare className="w-4 h-4 text-[#94A3B8]" />
-                                <p className="text-sm text-[#F1F5F9]">
-                                  OTP: <span className="font-mono font-bold text-[#3B82F6]">{purchase.otp_code}</span>
+                                <MessageSquare className="w-4 h-4 text-[#8CA398]" />
+                                <p className="text-sm text-[#EAF2ED]">
+                                  OTP: <span className="font-mono font-bold text-[#16C784]">{purchase.otp_code}</span>
                                 </p>
                                 <button
                                   onClick={() => handleCopy(purchase.otp_code!, 'OTP code')}
-                                  className="text-[#64748B] hover:text-[#3B82F6] transition-colors"
+                                  className="text-[#6B8378] hover:text-[#16C784] transition-colors"
                                   title="Copy OTP code"
                                 >
                                   {copiedField === `otp-${purchase.id}` ? (
@@ -368,7 +368,7 @@ export default function DashboardPage() {
                             )}
                           </div>
                           
-                          <div className="flex items-center gap-2 text-xs text-[#64748B]">
+                          <div className="flex items-center gap-2 text-xs text-[#6B8378]">
                             <Clock className="w-3.5 h-3.5" />
                             <span>{formatTimeAgo(purchase.created_at)}</span>
                           </div>
@@ -379,13 +379,13 @@ export default function DashboardPage() {
                 </div>
               ) : (
                 <div className="flex flex-col items-center justify-center py-12">
-                  <div className="w-16 h-16 bg-[#0F1729] rounded-full border-2 border-[#2A3A5C] flex items-center justify-center mb-4">
-                    <AlertCircle className="w-8 h-8 text-[#64748B]" />
+                  <div className="w-16 h-16 bg-[#111713] rounded-full border-2 border-[#24352A] flex items-center justify-center mb-4">
+                    <AlertCircle className="w-8 h-8 text-[#6B8378]" />
                   </div>
-                  <p className="text-sm text-[#64748B] mb-4">No purchases yet</p>
+                  <p className="text-sm text-[#6B8378] mb-4">No purchases yet</p>
                   <Button
                     onClick={() => navigate('/dashboard/all-countries')}
-                    className="bg-[#3B82F6] hover:bg-[#2563EB] text-white font-semibold px-6 py-3 rounded-lg transition-all"
+                    className="bg-[#16C784] hover:bg-[#0EA968] text-white font-semibold px-6 py-3 rounded-lg transition-all"
                   >
                     <Phone className="w-4 h-4 mr-2" />
                     Buy Your First Number
@@ -400,34 +400,34 @@ export default function DashboardPage() {
 
       {/* Virtual Account Modal */}
       <Dialog open={showVirtualAccountModal} onOpenChange={setShowVirtualAccountModal}>
-        <DialogContent className="sm:max-w-md bg-white dark:bg-[#1E2A45]">
+        <DialogContent className="sm:max-w-md bg-white dark:bg-[#1B241D]">
           <DialogHeader>
-            <DialogTitle className="text-center text-gray-900 dark:text-[#F1F5F9] flex items-center justify-center gap-2">
-              <CreditCard className="w-5 h-5 text-[#3B82F6]" />
+            <DialogTitle className="text-center text-gray-900 dark:text-[#EAF2ED] flex items-center justify-center gap-2">
+              <CreditCard className="w-5 h-5 text-[#16C784]" />
               Virtual Account Details
             </DialogTitle>
-            <DialogDescription className="text-center text-gray-600 dark:text-[#94A3B8]">
+            <DialogDescription className="text-center text-gray-600 dark:text-[#8CA398]">
               Use this account to fund your wallet
             </DialogDescription>
           </DialogHeader>
           
           {isLoadingVirtualAccount ? (
             <div className="flex flex-col items-center justify-center py-8">
-              <Loader2 className="w-8 h-8 text-[#3B82F6] animate-spin mb-3" />
-              <p className="text-sm text-gray-600 dark:text-[#94A3B8]">Loading account details...</p>
+              <Loader2 className="w-8 h-8 text-[#16C784] animate-spin mb-3" />
+              <p className="text-sm text-gray-600 dark:text-[#8CA398]">Loading account details...</p>
             </div>
           ) : virtualAccount ? (
             <div className="space-y-4">
               {/* Info Alert */}
-              <div className="bg-blue-50 dark:bg-[#3B82F6]/10 border border-blue-200 dark:border-[#3B82F6]/30 rounded-xl p-3 flex gap-2">
-                <Info className="w-4 h-4 text-blue-600 dark:text-[#3B82F6] flex-shrink-0 mt-0.5" />
-                <p className="text-xs text-blue-800 dark:text-[#94A3B8]">
+              <div className="bg-blue-50 dark:bg-[#16C784]/10 border border-blue-200 dark:border-[#16C784]/30 rounded-xl p-3 flex gap-2">
+                <Info className="w-4 h-4 text-blue-600 dark:text-[#16C784] flex-shrink-0 mt-0.5" />
+                <p className="text-xs text-blue-800 dark:text-[#8CA398]">
                   Transfers to this account are automatically credited to your wallet within minutes.
                 </p>
               </div>
 
               {/* Account Number - Highlighted */}
-              <div className="bg-gradient-to-br from-[#3B82F6] to-[#2563EB] rounded-xl p-4 shadow-lg">
+              <div className="bg-gradient-to-br from-[#16C784] to-[#0EA968] rounded-xl p-4 shadow-lg">
                 <p className="text-xs text-blue-200 mb-2 uppercase tracking-wide">Account Number</p>
                 <div className="flex items-center justify-between gap-3 bg-white/10 backdrop-blur-sm rounded-lg p-3">
                   <p className="text-2xl font-mono font-bold text-white tracking-wider">
@@ -448,21 +448,21 @@ export default function DashboardPage() {
               </div>
 
               {/* Account Name */}
-              <div className="bg-gray-50 dark:bg-[#0F1729] rounded-xl p-4 border border-gray-200 dark:border-[#2A3A5C]">
-                <p className="text-xs text-gray-600 dark:text-[#64748B] mb-1 uppercase tracking-wide">Account Name</p>
-                <p className="text-base font-semibold text-gray-900 dark:text-[#F1F5F9]">{virtualAccount.account_name}</p>
+              <div className="bg-gray-50 dark:bg-[#111713] rounded-xl p-4 border border-gray-200 dark:border-[#24352A]">
+                <p className="text-xs text-gray-600 dark:text-[#6B8378] mb-1 uppercase tracking-wide">Account Name</p>
+                <p className="text-base font-semibold text-gray-900 dark:text-[#EAF2ED]">{virtualAccount.account_name}</p>
               </div>
 
               {/* Bank Name */}
-              <div className="bg-gray-50 dark:bg-[#0F1729] rounded-xl p-4 border border-gray-200 dark:border-[#2A3A5C]">
-                <p className="text-xs text-gray-600 dark:text-[#64748B] mb-1 uppercase tracking-wide">Bank Name</p>
-                <p className="text-base font-semibold text-gray-900 dark:text-[#F1F5F9]">{virtualAccount.bank_name}</p>
+              <div className="bg-gray-50 dark:bg-[#111713] rounded-xl p-4 border border-gray-200 dark:border-[#24352A]">
+                <p className="text-xs text-gray-600 dark:text-[#6B8378] mb-1 uppercase tracking-wide">Bank Name</p>
+                <p className="text-base font-semibold text-gray-900 dark:text-[#EAF2ED]">{virtualAccount.bank_name}</p>
               </div>
             </div>
           ) : (
             <div className="flex flex-col items-center justify-center py-8">
               <AlertCircle className="w-8 h-8 text-gray-400 mb-3" />
-              <p className="text-sm text-gray-600 dark:text-[#94A3B8]">Failed to load account details</p>
+              <p className="text-sm text-gray-600 dark:text-[#8CA398]">Failed to load account details</p>
             </div>
           )}
         </DialogContent>

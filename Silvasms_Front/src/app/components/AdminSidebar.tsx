@@ -12,8 +12,6 @@ import {
   Settings
 } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
-import { ImageWithFallback } from './figma/ImageWithFallback';
-import logoImage from 'figma:asset/2226b3396cb7765688c486ec123c298ea47bd028.png';
 import { useState } from 'react';
 
 export default function AdminSidebar() {
@@ -58,14 +56,14 @@ export default function AdminSidebar() {
       {/* Mobile Menu Button */}
       <button
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        className="lg:hidden fixed top-3 right-4 z-50 p-2.5 rounded-lg bg-blue-600 text-white shadow-lg hover:bg-blue-700 transition-colors"
+        className="lg:hidden fixed top-3 right-4 z-50 p-2.5 rounded-lg bg-[#16C784] text-[#06120C] shadow-lg hover:bg-[#0EA968] transition-colors"
       >
         {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
       </button>
 
       {/* Overlay */}
       {isMobileMenuOpen && (
-        <div 
+        <div
           className="lg:hidden fixed inset-0 bg-black/50 z-30"
           onClick={() => setIsMobileMenuOpen(false)}
         />
@@ -74,60 +72,61 @@ export default function AdminSidebar() {
       {/* Sidebar */}
       <div className={`
         fixed lg:static inset-y-0 left-0 z-40
-        w-72 bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 
+        w-72 bg-[#0A0D0B] border-r border-[#1B241D]
         flex flex-col
         transform transition-transform duration-300 ease-in-out
         ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
       `}>
         {/* Logo & Brand */}
-        <div className="p-6 border-b border-gray-200 dark:border-gray-800">
-          <div className="flex items-center gap-3">
-            <ImageWithFallback 
-              src={logoImage} 
-              alt="SMS Legit Logo" 
-              className="h-12 w-12 object-contain"
-            />
+        <div className="p-6 border-b border-[#1B241D]">
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 rounded-md bg-[#16C784]/10 border border-[#16C784]/30 flex items-center justify-center flex-shrink-0">
+              <span className="signal-dot w-1.5 h-1.5 rounded-full bg-[#16C784]" />
+            </div>
             <div>
-              <span className="font-bold text-lg text-blue-600 dark:text-blue-400">SMSLEGIT</span>
-              <p className="text-xs text-gray-500 dark:text-gray-400">Admin Panel</p>
+              <span className="text-lg tracking-tight" style={{ fontFamily: 'var(--font-display)' }}>
+                <span className="font-semibold text-[#EAF2ED]">Silva</span>
+                <span className="font-semibold text-[#16C784]">-Sms</span>
+              </span>
+              <p className="text-xs text-[#6B8378]">Admin Panel</p>
             </div>
           </div>
         </div>
 
         {/* Admin Info */}
-        <div className="p-4 border-b border-gray-200 dark:border-gray-800 bg-blue-50 dark:bg-blue-950/30">
+        <div className="p-4 border-b border-[#1B241D] bg-[#123825]/40">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white">
+            <div className="w-10 h-10 rounded-full bg-[#16C784] flex items-center justify-center text-[#06120C] font-semibold flex-shrink-0">
               {user?.username?.charAt(0).toUpperCase()}
             </div>
             <div className="flex-1 min-w-0">
-              <p className="text-sm font-medium text-gray-900 dark:text-white truncate">{user?.username}</p>
-              <p className="text-xs text-blue-600 dark:text-blue-400">Administrator</p>
+              <p className="text-sm font-medium text-[#EAF2ED] truncate">{user?.username}</p>
+              <p className="text-xs text-[#16C784]">Administrator</p>
             </div>
           </div>
         </div>
 
         {/* Navigation */}
         <nav className="flex-1 overflow-y-auto py-4">
-          <ul className="space-y-1 px-3">
+          <ul className="space-y-0.5 px-3">
             {menuItems.map((item) => {
               const isActive = location.pathname === item.path;
               const Icon = item.icon;
-              
+
               return (
                 <li key={item.path}>
                   <Link
                     to={item.path}
                     onClick={handleLinkClick}
                     className={`
-                      flex items-center gap-3 px-4 py-3 rounded-lg transition-all
-                      ${isActive 
-                        ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/30' 
-                        : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+                      flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-all border-l-[3px]
+                      ${isActive
+                        ? 'bg-[#1B241D] text-[#16C784] border-[#16C784]'
+                        : 'text-[#8CA398] border-transparent hover:bg-[#111713] hover:text-[#EAF2ED]'
                       }
                     `}
                   >
-                    <Icon className="w-5 h-5 flex-shrink-0" />
+                    <Icon className="w-4 h-4 flex-shrink-0" />
                     <span className="flex-1">{item.label}</span>
                     {isActive && <ChevronRight className="w-4 h-4" />}
                   </Link>
@@ -142,20 +141,20 @@ export default function AdminSidebar() {
           <Link
             to="/dashboard"
             onClick={handleLinkClick}
-            className="flex items-center gap-3 px-4 py-3 rounded-lg transition-all bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700"
+            className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-all bg-[#111713] text-[#8CA398] hover:bg-[#1B241D] hover:text-[#EAF2ED] border border-[#1B241D]"
           >
-            <ArrowLeft className="w-5 h-5 flex-shrink-0" />
+            <ArrowLeft className="w-4 h-4 flex-shrink-0" />
             <span className="flex-1">User Dashboard</span>
           </Link>
         </div>
 
         {/* Logout */}
-        <div className="p-4 border-t border-gray-200 dark:border-gray-800">
+        <div className="p-3 border-t border-[#1B241D]">
           <button
             onClick={logout}
-            className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/30 transition-all"
+            className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-[#8CA398] hover:text-[#F2555B] hover:bg-[#111713] transition-all"
           >
-            <LogOut className="w-5 h-5" />
+            <LogOut className="w-4 h-4 flex-shrink-0 text-[#F2555B]" />
             <span>Logout</span>
           </button>
         </div>

@@ -14,12 +14,12 @@ export default function FAQsPage() {
       title: 'Getting Started',
       faqs: [
         {
-          question: 'How does GoldenSMS work?',
-          answer: 'GoldenSMS provides temporary phone numbers that can receive SMS verification codes. Simply choose a country, select a number, and use it to verify your account on any service. You\'ll receive the SMS code instantly in your dashboard.'
+          question: 'How does Silva-Sms work?',
+          answer: 'Silva-Sms provides temporary phone numbers that can receive SMS verification codes. Simply choose a country, select a number, and use it to verify your account on any service. You\'ll receive the SMS code instantly in your dashboard.'
         },
         {
           question: 'Do I need a subscription?',
-          answer: 'No! GoldenSMS uses a pay-as-you-go wallet system. Add funds to your wallet and only pay when you purchase a number. There are no monthly fees or subscriptions.'
+          answer: 'No! Silva-Sms uses a pay-as-you-go wallet system. Add funds to your wallet and only pay when you purchase a number. There are no monthly fees or subscriptions.'
         },
         {
           question: 'How much does it cost?',
@@ -40,7 +40,7 @@ export default function FAQsPage() {
         },
         {
           question: 'Which services are supported?',
-          answer: 'GoldenSMS works with most major platforms including Instagram, WhatsApp, Telegram, Facebook, Twitter, Google, and hundreds more. We support social media, messaging apps, and general verification services.'
+          answer: 'Silva-Sms works with most major platforms including Instagram, WhatsApp, Telegram, Facebook, Twitter, Google, and hundreds more. We support social media, messaging apps, and general verification services.'
         },
         {
           question: 'What if I don\'t receive the code?',
@@ -89,16 +89,16 @@ export default function FAQsPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#0A0F1E] via-[#0F1729] to-[#1E2A45] p-6 lg:p-8">
+    <div className="min-h-screen bg-gradient-to-br from-[#0A0D0B] via-[#111713] to-[#1B241D] p-6 lg:p-8">
       <div className="max-w-4xl mx-auto">
       {/* Header */}
-      <div className="text-center mb-12 p-8 rounded-2xl bg-gradient-to-r from-[#1D4ED8] via-[#1E40AF] to-[#0F2B6B] shadow-xl shadow-blue-500/20 dark:shadow-blue-900/30">
+      <div className="text-center mb-12 p-8 rounded-2xl bg-gradient-to-r from-[#0B8055] via-[#0B8055] to-[#0B2018] shadow-xl shadow-blue-500/20 dark:shadow-blue-900/30">
         <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
           <HelpCircle className="w-8 h-8 text-white" />
         </div>
         <h1 className="text-3xl text-white mb-2">Frequently Asked Questions</h1>
         <p className="text-blue-100 dark:text-blue-200">
-          Find answers to common questions about GoldenSMS
+          Find answers to common questions about Silva-Sms
         </p>
       </div>
 
@@ -134,22 +134,22 @@ export default function FAQsPage() {
       {/* Contact Support */}
       <Card className="border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-950/30">
         <CardContent className="p-8 text-center">
-          <MessageSquare className="w-12 h-12 text-[#3B82F6] dark:text-blue-400 mx-auto mb-4" />
-          <h3 className="text-xl text-[#3B82F6] dark:text-blue-100 mb-2">
+          <MessageSquare className="w-12 h-12 text-[#16C784] dark:text-blue-400 mx-auto mb-4" />
+          <h3 className="text-xl text-[#16C784] dark:text-blue-100 mb-2">
             Still have questions?
           </h3>
-          <p className="text-[#2563EB] dark:text-blue-300 mb-6">
+          <p className="text-[#0EA968] dark:text-blue-300 mb-6">
             Our support team is here to help you 24/7
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Button 
               variant="outline" 
-              className="border border-[#3B82F6] text-[#3B82F6] hover:bg-blue-100 dark:hover:bg-blue-900/30"
+              className="border border-[#16C784] text-[#16C784] hover:bg-blue-100 dark:hover:bg-blue-900/30"
             >
               <Mail className="w-4 h-4 mr-2" />
               Email Support
             </Button>
-            <Button className="bg-gradient-to-r from-[#3B82F6] to-[#2563EB] hover:from-[#2563EB] hover:to-[#1D4ED8] text-white">
+            <Button className="bg-gradient-to-r from-[#16C784] to-[#0EA968] hover:from-[#0EA968] hover:to-[#0B8055] text-white">
               <MessageSquare className="w-4 h-4 mr-2" />
               Live Chat
             </Button>

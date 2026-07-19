@@ -2,80 +2,125 @@
 
 :root {
   --font-size: 16px;
-  --background: #ffffff;
-  --foreground: oklch(0.145 0 0);
+  --background: #F6FAF7;
+  --foreground: #0E1512;
   --card: #ffffff;
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: #030213;
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.95 0.0058 264.53);
-  --secondary-foreground: #030213;
-  --muted: #ececf0;
-  --muted-foreground: #717182;
-  --accent: #e9ebef;
-  --accent-foreground: #030213;
-  --destructive: #d4183d;
+  --card-foreground: #0E1512;
+  --popover: #ffffff;
+  --popover-foreground: #0E1512;
+  --primary: #0EA968;
+  --primary-foreground: #ffffff;
+  --secondary: #E7F2EC;
+  --secondary-foreground: #0E1512;
+  --muted: #EEF3EF;
+  --muted-foreground: #5E7268;
+  --accent: #DFF5E9;
+  --accent-foreground: #0A6545;
+  --destructive: #E4384A;
   --destructive-foreground: #ffffff;
-  --border: rgba(0, 0, 0, 0.1);
+  --border: rgba(10, 20, 15, 0.1);
   --input: transparent;
-  --input-background: #f3f3f5;
-  --switch-background: #cbced4;
+  --input-background: #F0F5F1;
+  --switch-background: #C9D6CD;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
+  --ring: #16C784;
+  --chart-1: #16C784;
+  --chart-2: #0B8055;
+  --chart-3: #3DCB8C;
+  --chart-4: #0A5239;
+  --chart-5: #71DEAB;
   --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: #030213;
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --sidebar: #0A0D0B;
+  --sidebar-foreground: #EAF2ED;
+  --sidebar-primary: #16C784;
+  --sidebar-primary-foreground: #06120C;
+  --sidebar-accent: #111713;
+  --sidebar-accent-foreground: #EAF2ED;
+  --sidebar-border: #1B241D;
+  --sidebar-ring: #16C784;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: 'Space Grotesk', 'Inter', ui-sans-serif, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', monospace;
 }
 
 .dark {
-  --background: #1e293b;
-  --foreground: #f1f5f9;
-  --card: #334155;
-  --card-foreground: #f1f5f9;
-  --popover: #334155;
-  --popover-foreground: #f1f5f9;
-  --primary: #3b82f6;
-  --primary-foreground: #ffffff;
-  --secondary: #475569;
-  --secondary-foreground: #f1f5f9;
-  --muted: #475569;
-  --muted-foreground: #cbd5e1;
-  --accent: #475569;
-  --accent-foreground: #f1f5f9;
-  --destructive: #ef4444;
+  --background: #0A0D0B;
+  --foreground: #EAF2ED;
+  --card: #111713;
+  --card-foreground: #EAF2ED;
+  --popover: #111713;
+  --popover-foreground: #EAF2ED;
+  --primary: #16C784;
+  --primary-foreground: #06120C;
+  --secondary: #1B241D;
+  --secondary-foreground: #EAF2ED;
+  --muted: #1B241D;
+  --muted-foreground: #8CA398;
+  --accent: #123825;
+  --accent-foreground: #6EE8AC;
+  --destructive: #F2555B;
   --destructive-foreground: #ffffff;
-  --border: #475569;
-  --input: #475569;
-  --ring: #64748b;
+  --border: #1B241D;
+  --input: #1B241D;
+  --ring: #16C784;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: #1e293b;
-  --sidebar-foreground: #f1f5f9;
-  --sidebar-primary: #3b82f6;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #334155;
-  --sidebar-accent-foreground: #f1f5f9;
-  --sidebar-border: #475569;
-  --sidebar-ring: #64748b;
+  --chart-1: #16C784;
+  --chart-2: #3DCB8C;
+  --chart-3: #71DEAB;
+  --chart-4: #0B8055;
+  --chart-5: #0A5239;
+  --sidebar: #0A0D0B;
+  --sidebar-foreground: #EAF2ED;
+  --sidebar-primary: #16C784;
+  --sidebar-primary-foreground: #06120C;
+  --sidebar-accent: #111713;
+  --sidebar-accent-foreground: #EAF2ED;
+  --sidebar-border: #1B241D;
+  --sidebar-ring: #16C784;
+}
+
+/* Reskin Tailwind's built-in blue + neutral ramps so every stock utility
+   class (bg-blue-600, text-gray-400, dark:bg-slate-800, ...) already used
+   across the admin panel and auth screens resolves to the brand palette
+   without touching each call site. */
+@theme {
+  --color-blue-50: #EAFBF3;
+  --color-blue-100: #D1F5E4;
+  --color-blue-200: #A6ECC9;
+  --color-blue-300: #71DEAB;
+  --color-blue-400: #3DCB8C;
+  --color-blue-500: #16C784;
+  --color-blue-600: #0EA968;
+  --color-blue-700: #0B8055;
+  --color-blue-800: #0A6545;
+  --color-blue-900: #0A5239;
+  --color-blue-950: #052E20;
+
+  --color-gray-50: #F4F7F5;
+  --color-gray-100: #E6ECE8;
+  --color-gray-200: #CBD6D0;
+  --color-gray-300: #A8B8AF;
+  --color-gray-400: #7E9188;
+  --color-gray-500: #5E7268;
+  --color-gray-600: #495A51;
+  --color-gray-700: #3A483F;
+  --color-gray-800: #232D27;
+  --color-gray-900: #151C17;
+  --color-gray-950: #0A0D0B;
+
+  --color-slate-50: #F4F7F5;
+  --color-slate-100: #E6ECE8;
+  --color-slate-200: #CBD6D0;
+  --color-slate-300: #A8B8AF;
+  --color-slate-400: #7E9188;
+  --color-slate-500: #5E7268;
+  --color-slate-600: #495A51;
+  --color-slate-700: #3A483F;
+  --color-slate-800: #232D27;
+  --color-slate-900: #151C17;
+  --color-slate-950: #0A0D0B;
 }
 
 @theme inline {
@@ -126,6 +171,47 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-display);
+  }
+}
+
+/* "Signal chip" — the recurring mono treatment for phone numbers, OTP
+   codes and wallet balances: the one visual idea reused everywhere data
+   from an SMS/telecom source is displayed. */
+.signal-chip {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+
+.signal-dot {
+  position: relative;
+  display: inline-block;
+}
+
+.signal-dot::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 9999px;
+  background: currentColor;
+  opacity: 0.35;
+  animation: signal-pulse 2s ease-out infinite;
+}
+
+@keyframes signal-pulse {
+  0% { transform: scale(0.6); opacity: 0.5; }
+  70% { transform: scale(1.8); opacity: 0; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .signal-dot::before {
+    animation: none;
   }
 }
 

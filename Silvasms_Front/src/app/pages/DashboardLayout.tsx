@@ -43,7 +43,6 @@ import { toast } from 'sonner@2.0.3';
 import { useAuth } from '../contexts/AuthContext';
 import { useTheme } from '../contexts/ThemeContext';
 import { api } from '../utils/api';
-import logoImage from 'figma:asset/2226b3396cb7765688c486ec123c298ea47bd028.png';
 
 export default function DashboardLayout() {
   const navigate = useNavigate();
@@ -131,7 +130,7 @@ export default function DashboardLayout() {
   };
 
   return (
-    <div className="flex h-screen bg-[#0A0F1E] overflow-hidden">
+    <div className="flex h-screen bg-[#0A0D0B] overflow-hidden">
       {/* Desktop Sidebar */}
       <div className="hidden lg:block">
         <Sidebar onLogout={handleLogout} />
@@ -140,7 +139,7 @@ export default function DashboardLayout() {
       {/* Main Content Area */}
       <div className="flex-1 flex flex-col overflow-hidden">
         {/* Top Navigation Bar */}
-        <div className="sticky top-0 h-16 bg-[#0F1729] border-b border-[#1E2A45] flex items-center justify-between px-4 lg:px-6 z-30">
+        <div className="sticky top-0 h-16 bg-[#111713] border-b border-[#1B241D] flex items-center justify-between px-4 lg:px-6 z-30">
           {/* Left Side - Mobile Menu + Breadcrumb */}
           <div className="flex items-center gap-4">
             <Sheet open={sidebarOpen} onOpenChange={setSidebarOpen}>
@@ -148,32 +147,32 @@ export default function DashboardLayout() {
                 <Button 
                   variant="ghost" 
                   size="icon"
-                  className="lg:hidden hover:bg-[#1E2A45] text-[#94A3B8]"
+                  className="lg:hidden hover:bg-[#1B241D] text-[#8CA398]"
                 >
                   <Menu className="w-6 h-6" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="left" className="p-0 w-60 bg-[#0F1729] border-[#1E2A45]">
+              <SheetContent side="left" className="p-0 w-60 bg-[#111713] border-[#1B241D]">
                 <Sidebar onLogout={handleLogout} isMobile onNavigate={() => setSidebarOpen(false)} />
               </SheetContent>
             </Sheet>
 
             {/* Breadcrumb - Hidden on mobile */}
-            <div className="hidden sm:flex items-center gap-2 text-sm text-[#64748B]">
+            <div className="hidden sm:flex items-center gap-2 text-sm text-[#6B8378]">
               {getBreadcrumb().split(' / ').map((crumb, index, arr) => (
                 <div key={index} className="flex items-center gap-2">
-                  <span className={index === arr.length - 1 ? 'text-[#F1F5F9]' : 'text-[#64748B]'}>
+                  <span className={index === arr.length - 1 ? 'text-[#EAF2ED]' : 'text-[#6B8378]'}>
                     {crumb}
                   </span>
-                  {index < arr.length - 1 && <ChevronRight className="w-4 h-4 text-[#2A3A5C]" />}
+                  {index < arr.length - 1 && <ChevronRight className="w-4 h-4 text-[#24352A]" />}
                 </div>
               ))}
             </div>
 
             {/* Mobile Logo */}
-            <div className="flex items-center gap-1 sm:hidden">
-              <span className="text-base font-bold text-[#F1F5F9]">Golden</span>
-              <span className="text-base font-bold text-[#3B82F6]">SMS</span>
+            <div className="flex items-center gap-1 sm:hidden" style={{ fontFamily: 'var(--font-display)' }}>
+              <span className="text-base font-semibold text-[#EAF2ED]">Silva</span>
+              <span className="text-base font-semibold text-[#16C784]">-Sms</span>
             </div>
           </div>
 
@@ -184,53 +183,54 @@ export default function DashboardLayout() {
               variant="ghost"
               size="icon"
               onClick={toggleTheme}
-              className="hover:bg-[#1E2A45] rounded-lg flex-shrink-0 w-9 h-9"
+              className="hover:bg-[#1B241D] rounded-lg flex-shrink-0 w-9 h-9"
               title={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
             >
-              <Sun className="w-5 h-5 text-[#94A3B8]" />
+              <Sun className="w-5 h-5 text-[#8CA398]" />
             </Button>
 
             {/* Balance Display */}
             <div
               onClick={() => navigate('/dashboard/fund-wallet')}
-              className="flex items-center gap-2 px-3 py-2 rounded-lg bg-[#1E2A45] hover:bg-[#2A3A5C] cursor-pointer transition-colors border border-[#2A3A5C] flex-shrink-0"
+              className="signal-chip flex items-center gap-2 px-3 py-2 rounded-lg bg-[#1B241D] hover:bg-[#24352A] cursor-pointer transition-colors border border-[#24352A] flex-shrink-0"
             >
-              <span className="text-sm font-semibold text-[#3B82F6]">₦{walletBalance.toFixed(0)}</span>
+              <span className="signal-dot w-1.5 h-1.5 rounded-full bg-[#16C784]" />
+              <span className="text-sm font-semibold text-[#16C784]">₦{walletBalance.toFixed(0)}</span>
             </div>
 
             {/* User Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="icon" className="rounded-full hover:bg-[#1E2A45]">
-                  <Avatar className="w-9 h-9 border-2 border-[#3B82F6]">
-                    <AvatarFallback className="bg-[#3B82F6] text-white font-semibold">
+                <Button variant="ghost" size="icon" className="rounded-full hover:bg-[#1B241D]">
+                  <Avatar className="w-9 h-9 border-2 border-[#16C784]">
+                    <AvatarFallback className="bg-[#16C784] text-white font-semibold">
                       {user?.username?.charAt(0).toUpperCase() || 'U'}
                     </AvatarFallback>
                   </Avatar>
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-56 bg-[#1E2A45] border-[#2A3A5C]">
+              <DropdownMenuContent align="end" className="w-56 bg-[#1B241D] border-[#24352A]">
                 <DropdownMenuLabel>
                   <div className="flex flex-col space-y-1">
-                    <p className="text-sm text-[#F1F5F9]">{user?.username || 'User'}</p>
-                    <p className="text-xs text-[#94A3B8]">{user?.email || 'user@example.com'}</p>
+                    <p className="text-sm text-[#EAF2ED]">{user?.username || 'User'}</p>
+                    <p className="text-xs text-[#8CA398]">{user?.email || 'user@example.com'}</p>
                   </div>
                 </DropdownMenuLabel>
-                <DropdownMenuSeparator className="bg-[#2A3A5C]" />
-                <DropdownMenuItem onClick={() => navigate('/dashboard')} className="cursor-pointer text-[#94A3B8] hover:text-[#F1F5F9] hover:bg-[#0F1729]">
+                <DropdownMenuSeparator className="bg-[#24352A]" />
+                <DropdownMenuItem onClick={() => navigate('/dashboard')} className="cursor-pointer text-[#8CA398] hover:text-[#EAF2ED] hover:bg-[#111713]">
                   <User className="mr-2 h-4 w-4" />
                   <span>Profile</span>
                 </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer sm:hidden text-[#94A3B8] hover:text-[#F1F5F9] hover:bg-[#0F1729]" onClick={() => navigate('/dashboard/fund-wallet')}>
+                <DropdownMenuItem className="cursor-pointer sm:hidden text-[#8CA398] hover:text-[#EAF2ED] hover:bg-[#111713]" onClick={() => navigate('/dashboard/fund-wallet')}>
                   <Wallet className="mr-2 h-4 w-4" />
                   <span>Wallet: ₦{walletBalance.toLocaleString('en-NG', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
                 </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer text-[#94A3B8] hover:text-[#F1F5F9] hover:bg-[#0F1729]">
+                <DropdownMenuItem className="cursor-pointer text-[#8CA398] hover:text-[#EAF2ED] hover:bg-[#111713]">
                   <Settings className="mr-2 h-4 w-4" />
                   <span>Settings</span>
                 </DropdownMenuItem>
-                <DropdownMenuSeparator className="bg-[#2A3A5C]" />
-                <DropdownMenuItem onClick={() => setShowLogoutDialog(true)} className="cursor-pointer text-[#EF4444] focus:text-[#EF4444] hover:bg-[#0F1729]">
+                <DropdownMenuSeparator className="bg-[#24352A]" />
+                <DropdownMenuItem onClick={() => setShowLogoutDialog(true)} className="cursor-pointer text-[#EF4444] focus:text-[#EF4444] hover:bg-[#111713]">
                   <LogOut className="mr-2 h-4 w-4" />
                   <span>Logout</span>
                 </DropdownMenuItem>
@@ -240,7 +240,7 @@ export default function DashboardLayout() {
         </div>
 
         {/* Page Content */}
-        <div className="flex-1 overflow-auto bg-[#0A0F1E]">
+        <div className="flex-1 overflow-auto bg-[#0A0D0B]">
           <Outlet />
         </div>
       </div>

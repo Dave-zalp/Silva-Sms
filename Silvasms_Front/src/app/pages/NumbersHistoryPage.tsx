@@ -190,7 +190,7 @@ export default function NumbersHistoryPage() {
       );
     } else if (normalizedStatus === 'received') {
       return (
-        <Badge className="bg-[#3B82F6]/10 dark:bg-blue-950/20 text-[#3B82F6] dark:text-blue-400 hover:bg-[#3B82F6]/10 dark:hover:bg-blue-950/20">
+        <Badge className="bg-[#16C784]/10 dark:bg-blue-950/20 text-[#16C784] dark:text-blue-400 hover:bg-[#16C784]/10 dark:hover:bg-blue-950/20">
           <MessageSquare className="w-3 h-3 mr-1" />
           Received
         </Badge>
@@ -389,10 +389,10 @@ export default function NumbersHistoryPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#0A0F1E] via-[#0F1729] to-[#1E2A45] p-4 sm:p-6 lg:p-8">
+    <div className="min-h-screen bg-gradient-to-br from-[#0A0D0B] via-[#111713] to-[#1B241D] p-4 sm:p-6 lg:p-8">
       <div className="max-w-7xl mx-auto">
       {/* Header */}
-      <div className="mb-6 sm:mb-8 p-4 sm:p-6 rounded-2xl bg-gradient-to-r from-[#1D4ED8] via-[#1E40AF] to-[#0F2B6B] shadow-xl shadow-blue-500/20 dark:shadow-blue-900/30">
+      <div className="mb-6 sm:mb-8 p-4 sm:p-6 rounded-2xl bg-gradient-to-r from-[#0B8055] via-[#0B8055] to-[#0B2018] shadow-xl shadow-blue-500/20 dark:shadow-blue-900/30">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
             <h1 className="text-2xl sm:text-3xl text-white mb-2">Numbers History</h1>
@@ -441,7 +441,7 @@ export default function NumbersHistoryPage() {
         <CardContent className="p-0">
           {isLoading ? (
             <div className="flex flex-col items-center justify-center py-16">
-              <Loader2 className="w-10 h-10 text-[#3B82F6] animate-spin mb-3" />
+              <Loader2 className="w-10 h-10 text-[#16C784] animate-spin mb-3" />
               <p className="text-gray-600 dark:text-gray-400">Loading number history...</p>
             </div>
           ) : error ? (
@@ -450,7 +450,7 @@ export default function NumbersHistoryPage() {
               <p className="text-gray-600 dark:text-gray-400 mb-4 text-center">{error}</p>
               <Button 
                 onClick={fetchNumberHistory}
-                className="bg-gradient-to-r from-[#3B82F6] to-[#2563EB] hover:from-[#2563EB] hover:to-[#1D4ED8] text-white"
+                className="bg-gradient-to-r from-[#16C784] to-[#0EA968] hover:from-[#0EA968] hover:to-[#0B8055] text-white"
               >
                 <RefreshCcw className="w-4 h-4 mr-2" />
                 Try Again
@@ -533,7 +533,7 @@ export default function NumbersHistoryPage() {
                           <td className="px-6 py-4">
                             {item.otp_code ? (
                               <div className="flex items-center gap-2">
-                                <code className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-700 text-[#3B82F6] dark:text-blue-400">
+                                <code className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-700 text-[#16C784] dark:text-blue-400">
                                   {item.otp_code}
                                 </code>
                                 <button
@@ -542,7 +542,7 @@ export default function NumbersHistoryPage() {
                                     setCopiedField(`otp-${item.id}`);
                                     setTimeout(() => setCopiedField(null), 2000);
                                   }}
-                                  className="text-gray-400 hover:text-[#3B82F6] dark:text-gray-500 dark:hover:text-blue-400 transition-colors"
+                                  className="text-gray-400 hover:text-[#16C784] dark:text-gray-500 dark:hover:text-blue-400 transition-colors"
                                   title="Copy OTP code"
                                 >
                                   {copiedField === `otp-${item.id}` ? (
@@ -640,7 +640,7 @@ export default function NumbersHistoryPage() {
                             setCopiedField(`phone-${item.id}`);
                             setTimeout(() => setCopiedField(null), 2000);
                           }}
-                          className="flex-shrink-0 p-2.5 rounded-lg border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 hover:bg-blue-50 dark:hover:bg-blue-900/30 hover:border-[#3B82F6] dark:hover:border-blue-500 text-gray-700 dark:text-gray-300 hover:text-[#3B82F6] dark:hover:text-blue-400 transition-all active:scale-95 shadow-sm"
+                          className="flex-shrink-0 p-2.5 rounded-lg border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 hover:bg-blue-50 dark:hover:bg-blue-900/30 hover:border-[#16C784] dark:hover:border-blue-500 text-gray-700 dark:text-gray-300 hover:text-[#16C784] dark:hover:text-blue-400 transition-all active:scale-95 shadow-sm"
                           title="Copy phone number"
                         >
                           {copiedField === `phone-${item.id}` ? (
@@ -674,7 +674,7 @@ export default function NumbersHistoryPage() {
                         <div className="mb-3 flex items-center justify-between gap-2">
                           <div className="flex-1 min-w-0">
                             <span className="text-sm text-gray-500 dark:text-gray-400">Code: </span>
-                            <code className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-700 text-[#3B82F6] dark:text-blue-400 text-sm">
+                            <code className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-700 text-[#16C784] dark:text-blue-400 text-sm">
                               {item.otp_code}
                             </code>
                           </div>
@@ -684,7 +684,7 @@ export default function NumbersHistoryPage() {
                               setCopiedField(`otp-${item.id}`);
                               setTimeout(() => setCopiedField(null), 2000);
                             }}
-                            className="flex-shrink-0 p-2.5 rounded-lg border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 hover:bg-blue-50 dark:hover:bg-blue-900/30 hover:border-[#3B82F6] dark:hover:border-blue-500 text-gray-700 dark:text-gray-300 hover:text-[#3B82F6] dark:hover:text-blue-400 transition-all active:scale-95 shadow-sm"
+                            className="flex-shrink-0 p-2.5 rounded-lg border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 hover:bg-blue-50 dark:hover:bg-blue-900/30 hover:border-[#16C784] dark:hover:border-blue-500 text-gray-700 dark:text-gray-300 hover:text-[#16C784] dark:hover:text-blue-400 transition-all active:scale-95 shadow-sm"
                             title="Copy OTP code"
                           >
                             {copiedField === `otp-${item.id}` ? (

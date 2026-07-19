@@ -40,7 +40,7 @@ export default function ProviderSwitcher() {
       <button
         onClick={() => setIsOpen(!isOpen)}
         disabled={isLoading || isSwitching}
-        className="w-full bg-[#1E2A45] rounded-xl p-5 border border-[#2A3A5C] hover:border-[#3B82F6] hover:shadow-[0_0_0_1px_rgba(59,130,246,0.2)] transition-all text-left group disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full bg-[#1B241D] rounded-xl p-5 border border-[#24352A] hover:border-[#16C784] hover:shadow-[0_0_0_1px_rgba(59,130,246,0.2)] transition-all text-left group disabled:opacity-50 disabled:cursor-not-allowed"
       >
         <div className="flex items-start justify-between mb-4">
           <div className="w-10 h-10 bg-[#8B5CF6] rounded-lg flex items-center justify-center">
@@ -52,23 +52,23 @@ export default function ProviderSwitcher() {
           </div>
           <ChevronDown 
             className={cn(
-              "w-4 h-4 text-[#64748B] transition-transform",
+              "w-4 h-4 text-[#6B8378] transition-transform",
               isOpen && "rotate-180"
             )} 
           />
         </div>
-        <p className="text-[13px] text-[#94A3B8] mb-1">Active Server</p>
-        <p className="text-2xl font-bold text-[#F1F5F9]">
+        <p className="text-[13px] text-[#8CA398] mb-1">Active Server</p>
+        <p className="text-2xl font-bold text-[#EAF2ED]">
           {isLoading ? '...' : displayName}
         </p>
-        <p className="text-xs text-[#64748B] mt-1">
+        <p className="text-xs text-[#6B8378] mt-1">
           {activeProvider ? 'Click to switch' : 'Select to begin'}
         </p>
       </button>
 
       {/* Dropdown Menu - Displays above the button */}
       {isOpen && !isLoading && (
-        <div className="absolute bottom-full left-0 right-0 mb-2 bg-[#1E2A45] border border-[#2A3A5C] rounded-xl shadow-2xl overflow-hidden z-50">
+        <div className="absolute bottom-full left-0 right-0 mb-2 bg-[#1B241D] border border-[#24352A] rounded-xl shadow-2xl overflow-hidden z-50">
           {servers.map((server) => (
             <button
               key={server.id}
@@ -77,9 +77,9 @@ export default function ProviderSwitcher() {
               className={cn(
                 "w-full px-5 py-4 flex items-center justify-between transition-all",
                 server.globally_enabled
-                  ? "hover:bg-[#0F1729] cursor-pointer"
-                  : "opacity-50 cursor-not-allowed bg-[#0F1729]/50",
-                server.is_active && "bg-[#0F1729]"
+                  ? "hover:bg-[#111713] cursor-pointer"
+                  : "opacity-50 cursor-not-allowed bg-[#111713]/50",
+                server.is_active && "bg-[#111713]"
               )}
             >
               <div className="flex items-center gap-3">
@@ -90,10 +90,10 @@ export default function ProviderSwitcher() {
                   <Server className="w-4 h-4 text-white" />
                 </div>
                 <div className="text-left">
-                  <p className="text-sm font-semibold text-[#F1F5F9]">
+                  <p className="text-sm font-semibold text-[#EAF2ED]">
                     {getProviderDisplayName(server.key)}
                   </p>
-                  <p className="text-xs text-[#64748B]">
+                  <p className="text-xs text-[#6B8378]">
                     {server.globally_enabled 
                       ? (server.is_active ? 'Currently active' : 'Available')
                       : 'Unavailable'}
@@ -101,7 +101,7 @@ export default function ProviderSwitcher() {
                 </div>
               </div>
               {server.is_active && (
-                <Check className="w-5 h-5 text-[#3B82F6]" />
+                <Check className="w-5 h-5 text-[#16C784]" />
               )}
             </button>
           ))}

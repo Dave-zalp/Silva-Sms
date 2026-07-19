@@ -174,7 +174,7 @@ export default function App() {
     cache.clearExpired();
     
     // Set document title and meta description
-    document.title = 'GoldenSMS - Your Privacy, Your Number';
+    document.title = 'Silva-Sms - Your Privacy, Your Number';
     
     // Update or create meta description
     let metaDescription = document.querySelector('meta[name="description"]');
