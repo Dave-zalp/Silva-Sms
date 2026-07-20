@@ -46,7 +46,7 @@ jobs:
           server: ${{ secrets.SILVASMS_SSH_HOST }}
           port: ${{ secrets.SILVASMS_SSH_PORT }}
           ssh_private_key: ${{ secrets.SILVASMS_SSH_KEY }}
-          local_path: './Silvasms_back/'
+          local_path: './Silvasms_back/*'
           remote_path: ${{ secrets.SILVASMS_DEPLOY_PATH }}
           sftp_only: true
 
@@ -148,6 +148,6 @@ jobs:
           server: ${{ secrets.SILVASMS_SSH_HOST }}
           port: ${{ secrets.SILVASMS_SSH_PORT }}
           ssh_private_key: ${{ secrets.SILVASMS_SSH_KEY }}
-          local_path: './Silvasms_Front/dist/'
+          local_path: './Silvasms_Front/dist/*'
           remote_path: ${{ secrets.SILVASMS_FRONTEND_DEPLOY_PATH }}
           sftp_only: true
