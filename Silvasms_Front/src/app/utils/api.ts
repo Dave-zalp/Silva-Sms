@@ -1,6 +1,6 @@
 import { cache, CACHE_KEYS } from './cache';
 
-const API_BASE_URL = 'https://app.silva-sms.com/api';
+const API_BASE_URL = 'https://api.silva-sms.com/api';
 
 // Cache TTLs
 const COUNTRIES_CACHE_TTL = 30 * 60 * 1000; // 30 minutes

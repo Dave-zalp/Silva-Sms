@@ -39,7 +39,7 @@ export default function ResetPassword({ onSignIn }: ResetPasswordProps) {
     e.preventDefault();
     setIsLoading(true);
     setError('');
-    
+
     try {
       await api.forgotPassword({ email });
       setIsSubmitted(true);
@@ -93,7 +93,7 @@ export default function ResetPassword({ onSignIn }: ResetPasswordProps) {
                 We've sent password reset instructions to
               </p>
               <p className="text-blue-600 dark:text-blue-400 mb-6">{email}</p>
-              
+
               <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 rounded-xl p-4 mb-6">
                 <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
                   Click the link in the email to reset your password. The link will expire in 1 hour for security reasons.
@@ -121,7 +121,7 @@ export default function ResetPassword({ onSignIn }: ResetPasswordProps) {
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-500 dark:text-gray-500">
               Need help?{' '}
-              <a href="https://t.me/@LEGITSUPPORT2" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+              <a href="https://t.me/silvasms23" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
                 Contact support
               </a>
             </p>
@@ -252,7 +252,7 @@ export default function ResetPassword({ onSignIn }: ResetPasswordProps) {
               Our support team is available 24/7 to help you recover your account
             </p>
             <a
-              href="https://t.me/@LEGITSUPPORT2"
+              href="https://t.me/silvasms23"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-1"
