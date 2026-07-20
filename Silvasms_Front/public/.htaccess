@@ -1,0 +1,16 @@
+# Serve existing files/directories as-is; fall back to index.html so
+# react-router's BrowserRouter can handle the route client-side.
+# Without this, refreshing/direct-loading any non-root route (e.g.
+# /dashboard/fund-wallet) 404s because no such file exists on disk.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^ - [L]
+
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  RewriteRule . /index.html [L]
+</IfModule>
